@@ -2,5 +2,8 @@
 @import './base/normalize';
 @import './utils/variables';
 @import './utils/mixin';
-// @import './base/fonts';
+@import './base/fonts';
 @import './base/base';
+
+// Components
+@import './layout/general';
