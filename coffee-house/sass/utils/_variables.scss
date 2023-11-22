@@ -1,20 +1,14 @@
 // Color map
 $colors: (
-  'text-prime': #545454,
-  'text-secondary': #4c4c4c,
-  'text-donation': #b2b2b2,
-  'text-btn': #292929,
+  'text-accent': #b0907a,
+  'text-light': #e1d4c9,
+  'text-dark': #403f3d,
 
-  'accent': #f1cdb3,
-  'light': #ffffff,
-  'light-secondary': #cdcdcd,
-
-  'dark': #000000,
-
-  'hover': #fddcc4,
-
-  'bg-secondary': #f6f6f6,
-  'bg-card': #fafafa,
+  'bg-body': #e1d4c9,
+  'bg-container': #665f55,
+  'bg-backdrop': rgba(64, 63, 61, 0.8),
+  'border-light': #c1b6ad,
+  'border-dark': #665f55,
 );
 @function getColor($key) {
   @return map-get($colors, $key);
