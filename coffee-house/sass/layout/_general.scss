@@ -1,7 +1,7 @@
 body {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.5;
 
   color: getColor('text-dark');
@@ -10,15 +10,18 @@ body {
 }
 
 .container {
-  padding: 0 40px;
+  outline: 1px solid green;
+  margin: 0 auto;
+  padding: 0 2.5rem;
 
-  width: 100%;
+  width: 90rem;
 }
 
 .section {
-  padding-bottom: 100px;
+  padding-bottom: 6.25rem;
   width: 100%;
 }
 
 .section__title {
+  font-size: 3.75rem;
 }
