@@ -1,0 +1,32 @@
+.btn {
+  margin-top: 2.5rem;
+  width: 12.5rem;
+  padding: 1.25rem 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  background-color: getColor('bg-body');
+  border-radius: 6.25rem;
+
+  &__text {
+    transform: translateX(0.875rem);
+    @include animated(transform);
+  }
+  & > svg {
+    stroke: getColor('opacity');
+    @include animated(stroke);
+  }
+
+  &:hover,
+  &:focus {
+    & > .btn__text {
+      transform: translateX(-0);
+    }
+    & > svg {
+      stroke: getColor('text-dark');
+    }
+  }
+}

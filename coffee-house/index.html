@@ -14,10 +14,12 @@
     <!-- Header-block -->
     <header class="header">
       <div class="container header__container">
+        <!-- Logo -->
         <a href="./index.html" class="header__logo">
           <img src="./icons/logo.svg" alt="logo company" class="header__logo--img" width="100" />
         </a>
 
+        <!-- Navigation -->
         <nav class="nav">
           <ul class="nav__items">
             <li class="nav__item"><a href="/" class="nav__link">Favorite coffee</a></li>
@@ -35,6 +37,43 @@
         </a>
       </div>
     </header>
+
+    <!-- Main-block -->
+    <main>
+      <!-- The Hero section -->
+      <section class="section">
+        <div class="container hero--container">
+          <video
+            class="hero-video"
+            poster="./images/img-hero.jpg"
+            width="1360"
+            autoplay
+            muted
+            loop
+            preload="auto"
+          >
+            <source src="./video/hero-video.mp4" />
+          </video>
+
+          <div class="hero-wrap">
+            <h1 class="hero--title">
+              <span class="section__title--accent">Enjoy</span> premium coffee at our charming cafe
+            </h1>
+            <p class="text">
+              With its inviting atmosphere and delicious coffee options, the Coffee House Resource
+              is a popular destination for coffee lovers and those seeking a warm and inviting space
+              to enjoy their favorite beverage.
+            </p>
+            <a href="/" class="btn">
+              <span class="btn__text">Menu</span>
+              <svg class="header__icon btn__icon" width="20" height="20" aria-label="cup">
+                <use href="./icons/sprite.svg#coffee-cup"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <script src="./js/index.js"></script>
   </body>

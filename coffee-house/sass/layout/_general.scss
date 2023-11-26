@@ -24,4 +24,9 @@ body {
 
 .section__title {
   font-size: 3.75rem;
+
+  &--accent {
+    color: getColor('text-accent');
+    font-style: italic;
+  }
 }
