@@ -1,0 +1,20 @@
+.mobile-app--container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  text-align: left;
+}
+.mobile-app--wrap {
+  flex-basis: calc((100% - 6.25rem) / 2);
+}
+
+.mobile-app__text {
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+}
+
+.mobile-app--stores {
+  display: flex;
+  gap: 1.25rem;
+}

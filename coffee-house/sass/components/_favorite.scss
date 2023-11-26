@@ -7,31 +7,6 @@
   margin-bottom: 2.5rem;
 }
 
-.favorite__btn {
-  width: 3.75rem;
-  height: 3.75rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  border-radius: 50%;
-  border: 1px solid getColor('border-dark');
-
-  @include animated(background-color);
-  & > svg {
-    @include animated(stroke);
-  }
-
-  &:hover,
-  &:focus {
-    background-color: getColor('border-dark');
-
-    & > svg {
-      stroke: getColor('text-light');
-    }
-  }
-}
-
 .favorite__list {
   flex-grow: 1;
   display: flex;

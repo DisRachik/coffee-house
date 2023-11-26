@@ -46,8 +46,18 @@
     @include animated(transform);
   }
 
-  &:hover,
-  &:focus {
+  // &:hover,
+  // &:focus {
+  //   &::after {
+  //     transform: scaleX(1);
+  //   }
+  // }
+}
+@media (hover: hover) {
+  .nav__link:hover,
+  .header__menu-page:hover,
+  .nav__link:focus,
+  .header__menu-page:focus {
     &::after {
       transform: scaleX(1);
     }

@@ -65,8 +65,8 @@
               is a popular destination for coffee lovers and those seeking a warm and inviting space
               to enjoy their favorite beverage.
             </p>
-            <a href="/" class="btn">
-              <span class="btn__text">Menu</span>
+            <a href="/" class="hero--btn">
+              <span class="hero--btn__text">Menu</span>
               <svg class="icon" width="20" height="20" aria-label="cup">
                 <use href="./icons/sprite.svg#coffee-cup"></use>
               </svg>
@@ -83,7 +83,7 @@
           </h2>
 
           <div class="favorite__slider">
-            <button class="favorite__btn">
+            <button class="btn">
               <svg class="icon" width="24" height="24" aria-label="arrow to left">
                 <use href="./icons/sprite.svg#arrow-left"></use>
               </svg>
@@ -142,7 +142,7 @@
               </li>
             </ul>
 
-            <button class="favorite__btn">
+            <button class="btn">
               <svg class="icon" width="24" height="24" aria-label="arrow to right">
                 <use href="./icons/sprite.svg#arrow-right"></use>
               </svg>
@@ -166,7 +166,7 @@
             done.
           </h2>
           <ul class="about__gallery">
-            <li class="about__items">
+            <li class="about__item">
               <picture class="about__image">
                 <source
                   srcset="./images/about/about-1.webp 1x, ./images/about/about-1@2x.webp 2x"
@@ -185,7 +185,7 @@
               </picture>
             </li>
 
-            <li class="about__items">
+            <li class="about__item">
               <picture class="about__image">
                 <source
                   srcset="./images/about/about-2.webp 1x, ./images/about/about-2@2x.webp 2x"
@@ -204,7 +204,7 @@
               </picture>
             </li>
 
-            <li class="about__items">
+            <li class="about__item">
               <picture class="about__image">
                 <source
                   srcset="./images/about/about-3.webp 1x, ./images/about/about-3@2x.webp 2x"
@@ -223,7 +223,7 @@
               </picture>
             </li>
 
-            <li class="about__items">
+            <li class="about__item">
               <picture class="about__image">
                 <source
                   srcset="./images/about/about-4.webp 1x, ./images/about/about-4@2x.webp 2x"
@@ -242,6 +242,89 @@
               </picture>
             </li>
           </ul>
+        </div>
+      </section>
+
+      <!-- Mobile App -->
+      <section class="section">
+        <div class="container mobile-app--container">
+          <div class="mobile-app--wrap">
+            <h2 class="section__title">
+              <span class="section__title--accent">Download</span> our apps to start ordering
+            </h2>
+            <p class="mobile-app__text">
+              Download the Resource app today and experience the comfort of ordering your favorite
+              coffee from wherever you are
+            </p>
+
+            <ul class="mobile-app--stores">
+              <li>
+                <a href="https://www.apple.com/app-store/" class="btn--store">
+                  <svg class="btn-icon" width="36" height="36" aria-label="logo apple">
+                    <use href="./icons/sprite.svg#app-store"></use>
+                  </svg>
+                  <div class="btn--store__text">
+                    <p>Available on the</p>
+                    <p>App Store</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="https://play.google.com/store/" class="btn--store">
+                  <svg class="btn-icon" width="36" height="36" aria-label="logo play market">
+                    <use href="./icons/sprite.svg#google-play"></use>
+                  </svg>
+                  <div class="btn--store__text">
+                    <p>Available on</p>
+                    <p>Google Play</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mobile-app--wrap">
+            <picture class="mobile-app__image">
+              <source
+                srcset="
+                  ./images/mobile/mobile-screens-mb.webp    1x,
+                  ./images/mobile/mobile-screens-mb@2x.webp 2x
+                "
+                type="image/webp"
+                media="(max-width: 767.98px)"
+              />
+              <source
+                srcset="
+                  ./images/mobile/mobile-screens-mb.png    1x,
+                  ./images/mobile/mobile-screens-mb@2x.png 2x
+                "
+                type="image/png"
+                media="(max-width: 767.98px)"
+              />
+              <source
+                srcset="
+                  ./images/mobile/mobile-screens-dt.webp    1x,
+                  ./images/mobile/mobile-screens-dt@2x.webp 2x
+                "
+                type="image/webp"
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="
+                  ./images/mobile/mobile-screens-dt.png    1x,
+                  ./images/mobile/mobile-screens-dt@2x.png 2x
+                "
+                type="image/png"
+                media="(min-width: 768px)"
+              />
+              <img
+                src="./images/mobile/mobile-screens-mb.png"
+                alt="Image of two smartphones with a cafe website open."
+                width="630"
+                loading="lazy"
+              />
+            </picture>
+          </div>
         </div>
       </section>
     </main>

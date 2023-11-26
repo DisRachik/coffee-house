@@ -1,4 +1,4 @@
-.btn {
+.hero--btn {
   margin-top: 2.5rem;
   width: 12.5rem;
   padding: 1.25rem 0;
@@ -20,13 +20,92 @@
     @include animated(stroke);
   }
 
-  &:hover,
-  &:focus {
-    & > .btn__text {
+  // &:hover,
+  // &:focus {
+  //   & > .hero--btn__text {
+  //     transform: translateX(-0);
+  //   }
+  //   & > svg {
+  //     stroke: getColor('text-dark');
+  //   }
+  // }
+}
+@media (hover: hover) {
+  .hero--btn:hover,
+  .hero--btn:focus {
+    & > .hero--btn__text {
       transform: translateX(-0);
     }
     & > svg {
       stroke: getColor('text-dark');
     }
+  }
+}
+
+.btn {
+  width: 3.75rem;
+  height: 3.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+  border: 1px solid getColor('border-dark');
+
+  @include animated(background-color);
+
+  & > svg {
+    @include animated(stroke);
+  }
+
+  // &:focus {
+  //   background-color: getColor('border-dark');
+
+  //   & > svg {
+  //     stroke: getColor('text-light');
+  //   }
+  // }
+}
+
+@media (hover: hover) {
+  .btn:hover,
+  .btn:focus {
+    background-color: getColor('border-dark');
+
+    & > svg {
+      stroke: getColor('text-light');
+    }
+  }
+}
+
+.btn--store {
+  width: 12.5rem;
+  padding: 0.75rem 1.25rem;
+
+  display: flex;
+
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid getColor('border-dark');
+  border-radius: 6.25rem;
+
+  $value-list: color, background-color;
+  @include animated($value-list);
+
+  & > svg {
+    fill: currentColor;
+  }
+
+  &__text p:first-child {
+    margin-bottom: 0.125rem;
+    font-size: 0.625rem;
+    line-height: 1.4;
+  }
+}
+@media (hover: hover) {
+  .btn--store:hover,
+  .btn--store:focus {
+    color: getColor('text-light');
+    background-color: getColor('border-dark');
   }
 }
