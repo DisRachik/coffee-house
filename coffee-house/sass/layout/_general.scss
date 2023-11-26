@@ -20,13 +20,21 @@ body {
 .section {
   padding-bottom: 6.25rem;
   width: 100%;
+  text-align: center;
 }
 
 .section__title {
+  margin-bottom: 2.5rem;
   font-size: 3.75rem;
+  line-height: 1.25;
 
   &--accent {
     color: getColor('text-accent');
     font-style: italic;
   }
+}
+
+.icon {
+  fill: getColor('opacity');
+  stroke: getColor('text-dark');
 }

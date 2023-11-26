@@ -1,0 +1,78 @@
+.favorite__slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem;
+
+  margin-bottom: 2.5rem;
+}
+
+.favorite__btn {
+  width: 3.75rem;
+  height: 3.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+  border: 1px solid getColor('border-dark');
+
+  @include animated(background-color);
+  & > svg {
+    @include animated(stroke);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: getColor('border-dark');
+
+    & > svg {
+      stroke: getColor('text-light');
+    }
+  }
+}
+
+.favorite__list {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  gap: 21rem;
+
+  overflow: hidden;
+}
+
+.favorite-card {
+  width: 30rem;
+
+  &__image {
+    margin: 0 auto 1.25rem;
+  }
+
+  &__title,
+  &__text {
+    margin-bottom: 1rem;
+  }
+  &__text {
+    font-weight: 400;
+  }
+  &__price {
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+}
+
+.favorite__dotes {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+.favorite__dot {
+  width: 2.5rem;
+  height: 0.25rem;
+  border-radius: 6.25rem;
+  background-color: getColor('border-light');
+
+  &.active {
+    background-color: getColor('border-dark');
+  }
+}

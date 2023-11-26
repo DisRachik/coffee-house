@@ -10,6 +10,7 @@
     <!-- connecting styles -->
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
+
   <body>
     <!-- Header-block -->
     <header class="header">
@@ -31,7 +32,7 @@
 
         <a href="/" class="header__menu-page"
           >Menu
-          <svg class="header__icon" width="20" height="20" aria-label="cup">
+          <svg class="icon" width="20" height="20" aria-label="cup">
             <use href="./icons/sprite.svg#coffee-cup"></use>
           </svg>
         </a>
@@ -41,7 +42,7 @@
     <!-- Main-block -->
     <main>
       <!-- The Hero section -->
-      <section class="section">
+      <section class="section hero--section">
         <div class="container hero--container">
           <video
             class="hero-video"
@@ -66,11 +67,93 @@
             </p>
             <a href="/" class="btn">
               <span class="btn__text">Menu</span>
-              <svg class="header__icon btn__icon" width="20" height="20" aria-label="cup">
+              <svg class="icon" width="20" height="20" aria-label="cup">
                 <use href="./icons/sprite.svg#coffee-cup"></use>
               </svg>
             </a>
           </div>
+        </div>
+      </section>
+
+      <!-- Favorites Coffee -->
+      <section class="section">
+        <div class="container">
+          <h2 class="section__title">
+            Choose your <span class="section__title--accent">favorite</span> coffee
+          </h2>
+
+          <div class="favorite__slider">
+            <button class="favorite__btn">
+              <svg class="icon" width="24" height="24" aria-label="arrow to left">
+                <use href="./icons/sprite.svg#arrow-left"></use>
+              </svg>
+            </button>
+
+            <ul class="favorite__list">
+              <li class="favorite-card">
+                <picture class="favorite-card__image">
+                  <source
+                    srcset="
+                      ./images/favorites/coffee-slider-1-mb.webp    1x,
+                      ./images/favorites/coffee-slider-1-mb@2x.webp 2x
+                    "
+                    type="image/webp"
+                    media="(max-width: 767.98px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/favorites/coffee-slider-1-mb.png    1x,
+                      ./images/favorites/coffee-slider-1-mb@2x.png 2x
+                    "
+                    type="image/png"
+                    media="(max-width: 767.98px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/favorites/coffee-slider-1-dt.webp    1x,
+                      ./images/favorites/coffee-slider-1-dt@2x.webp 2x
+                    "
+                    type="image/webp"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/favorites/coffee-slider-1-dt.png    1x,
+                      ./images/favorites/coffee-slider-1-dt@2x.png 2x
+                    "
+                    type="image/png"
+                    media="(min-width: 768px)"
+                  />
+                  <img
+                    src="./images/favorites/coffee-slider-1-mb.png"
+                    alt="S’mores Frappuccino"
+                    width="480"
+                    height="480"
+                    loading="lazy"
+                  />
+                </picture>
+
+                <h3 class="favorite-card__title">S’mores Frappuccino</h3>
+                <p class="favorite-card__text">
+                  This new drink takes an espresso and mixes it with brown sugar and cinnamon before
+                  being topped with oat milk.
+                </p>
+                <p class="favorite-card__price">&#36;5.50</p>
+              </li>
+            </ul>
+
+            <button class="favorite__btn">
+              <svg class="icon" width="24" height="24" aria-label="arrow to right">
+                <use href="./icons/sprite.svg#arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+
+          <ul class="favorite__dotes">
+            <li class="favorite__dot active"></li>
+            <li class="favorite__dot"></li>
+            <li class="favorite__dot"></li>
+          </ul>
         </div>
       </section>
     </main>
