@@ -25,7 +25,8 @@
 }
 
 @media (hover: hover) {
-  .about__item:hover {
+  .about__item:hover,
+  .about__item:focus {
     & > .about__image {
       transform: scale(1);
     }
