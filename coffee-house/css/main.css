@@ -258,7 +258,6 @@ body {
 }
 
 .container {
-  outline: 1px solid green;
   margin: 0 auto;
   padding: 0 2.5rem;
   width: 90rem;
@@ -410,6 +409,24 @@ body {
   .btn--store:focus {
     color: #e1d4c9;
     background-color: #665f55;
+  }
+}
+.btn--socials {
+  border-color: #c1b6ad;
+}
+.btn--socials > svg {
+  stroke: #e1d4c9;
+  fill: rgba(0, 0, 0, 0);
+}
+
+@media (hover: hover) {
+  .btn--socials:hover,
+  .btn--socials:focus {
+    background-color: #e1d4c9;
+  }
+  .btn--socials:hover > svg,
+  .btn--socials:focus > svg {
+    stroke: #403f3d;
   }
 }
 .header {
@@ -675,4 +692,95 @@ body {
   display: -ms-flexbox;
   display: flex;
   gap: 1.25rem;
+}
+
+.footer {
+  margin-bottom: 2.5rem;
+  color: #e1d4c9;
+}
+.footer--container {
+  padding: 6.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 6.25rem;
+  background-color: #665f55;
+  border-radius: 2.5rem;
+}
+
+.footer__wrap {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.footer__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.address__title {
+  margin-bottom: 2.5rem;
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+.address__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  gap: 0.5rem;
+}
+
+.address__link {
+  position: relative;
+  padding: 0.25rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+}
+.address__link > svg {
+  stroke: #e1d4c9;
+}
+.address__link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #e1d4c9;
+  -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 750ms;
+          transition-duration: 750ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (hover: hover) {
+  a.address__link:hover::after,
+  a.address__link:focus::after {
+    -webkit-transform: scaleX(1);
+        -ms-transform: scaleX(1);
+            transform: scaleX(1);
+  }
 }/*# sourceMappingURL=main.css.map */

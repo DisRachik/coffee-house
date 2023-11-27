@@ -109,3 +109,21 @@
     background-color: getColor('border-dark');
   }
 }
+
+.btn--socials {
+  border-color: getColor('border-light');
+
+  & > svg {
+    stroke: getColor('text-light');
+    fill: getColor('opacity');
+  }
+}
+@media (hover: hover) {
+  .btn--socials:hover,
+  .btn--socials:focus {
+    background-color: getColor('bg-body');
+    & > svg {
+      stroke: getColor('text-dark');
+    }
+  }
+}
