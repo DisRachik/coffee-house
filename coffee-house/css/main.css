@@ -484,6 +484,16 @@ body {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.nav__link[href="javascript:void(0);"],
+.header__menu-page[href="javascript:void(0);"] {
+  cursor: auto;
+}
+.nav__link[href="javascript:void(0);"]::after,
+.header__menu-page[href="javascript:void(0);"]::after {
+  -webkit-transform: scaleX(1);
+      -ms-transform: scaleX(1);
+          transform: scaleX(1);
+}
 
 @media (hover: hover) {
   .nav__link:hover::after,
@@ -694,6 +704,91 @@ body {
   gap: 1.25rem;
 }
 
+.filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+}
+
+.filter__check {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: absolute;
+}
+.filter__check:checked + .filter__type {
+  background-color: #665f55;
+  color: #e1d4c9;
+  cursor: default;
+}
+.filter__check:checked + .filter__type > .filter__image {
+  background-color: #e1d4c9;
+  border-radius: 50%;
+}
+
+.filter__type {
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  border: 1px solid #c1b6ad;
+  border-radius: 6.25rem;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
+  -webkit-transition-duration: 750ms;
+          transition-duration: 750ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.filter__image {
+  width: 1.875rem;
+  height: 1.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #c1b6ad;
+  border-radius: 50%;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 750ms;
+          transition-duration: 750ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.filter__image > img {
+  width: 1rem;
+  height: 1.5rem;
+}
+
+@media (hover: hover) {
+  .filter__label:hover .filter__type {
+    background-color: #665f55;
+    color: #e1d4c9;
+  }
+  .filter__label:hover .filter__type > .filter__image {
+    background-color: #e1d4c9;
+    border-radius: 50%;
+  }
+}
 .footer {
   margin-bottom: 2.5rem;
   color: #e1d4c9;
