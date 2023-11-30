@@ -4,19 +4,36 @@
   color: getColor('text-light');
 
   &--container {
-    padding: 6.25rem;
+    padding: 3.75rem 0.95rem;
 
     display: flex;
-    align-items: center;
-    gap: 6.25rem;
+    flex-direction: column;
+
+    gap: 2.5rem;
 
     background-color: getColor('bg-container');
     border-radius: 2.5rem;
+
+    @include media('tablet-visible') {
+      padding: 6.25rem 3.75rem;
+
+      gap: 6.25rem;
+    }
+
+    @include media('desktop') {
+      padding: 6.25rem;
+
+      flex-direction: row;
+      align-items: center;
+      gap: 6.25rem;
+    }
   }
 }
 
 .footer__wrap {
-  flex-basis: 45.5%;
+  @include media('tablet') {
+    flex-basis: 45.5%;
+  }
 }
 
 .footer__socials {
