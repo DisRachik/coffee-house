@@ -33,7 +33,7 @@ body {
   font-size: 2rem;
   line-height: 1.25;
 
-  @include media('mobile') {
+  @include media('tablet-visible') {
     font-size: 3.75rem;
   }
 
