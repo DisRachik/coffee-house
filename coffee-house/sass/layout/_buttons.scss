@@ -57,14 +57,6 @@
   & > svg {
     @include animated(stroke);
   }
-
-  // &:focus {
-  //   background-color: getColor('border-dark');
-
-  //   & > svg {
-  //     stroke: getColor('text-light');
-  //   }
-  // }
 }
 
 @media (hover: hover) {
@@ -75,6 +67,27 @@
     & > svg {
       stroke: getColor('text-light');
     }
+
+    & > span {
+      background-color: getColor('text-light');
+    }
+  }
+}
+
+.btn__mobile-menu {
+  width: 2.75rem;
+  height: 2.75rem;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  & > span {
+    width: 1rem;
+    height: 2px;
+
+    background-color: getColor('text-dark');
+    border-radius: 1rem;
+
+    @include animated(background-color);
   }
 }
 

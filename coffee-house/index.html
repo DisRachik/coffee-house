@@ -25,21 +25,32 @@
         </a>
 
         <!-- Navigation -->
-        <nav class="nav">
+        <nav class="nav is-hidden">
           <ul class="nav__items">
             <li class="nav__item"><a href="#favorite" class="nav__link">Favorite coffee</a></li>
             <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
             <li class="nav__item"><a href="#mobile" class="nav__link">Mobile app</a></li>
             <li class="nav__item"><a href="#footer" class="nav__link">Contact us</a></li>
+            <li class="nav__item">
+              <a href="./menu.html" class="header__menu-page"
+                >Menu
+                <svg class="icon" width="20" height="20" aria-label="cup">
+                  <use href="./icons/sprite.svg#coffee-cup"></use>
+                </svg>
+              </a>
+            </li>
           </ul>
         </nav>
 
-        <a href="./menu.html" class="header__menu-page"
+        <a href="./menu.html" class="header__menu-page none"
           >Menu
           <svg class="icon" width="20" height="20" aria-label="cup">
             <use href="./icons/sprite.svg#coffee-cup"></use>
           </svg>
         </a>
+
+        <!-- Mobile menu -->
+        <button class="btn btn__mobile-menu" type="button"><span></span><span></span></button>
       </div>
     </header>
 

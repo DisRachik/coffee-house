@@ -1,7 +1,7 @@
 // For media rules - set min-width OR max-width for breakpoints
 $breakpoints: (
-  'phone': 375px,
-  'tablet': 768px,
+  'phone': 381px,
+  'tablet': 769px,
   'desktop': 1440px,
 );
 @mixin media($width, $type: min) {

@@ -10,13 +10,19 @@ body {
 }
 
 .container {
+  outline: 1px solid green;
   margin: 0 auto;
-  padding: 0 2.5rem;
+  padding: 0 1rem;
 
-  width: 90rem;
+  max-width: 90rem;
+
+  @include media('tablet') {
+    padding: 0 2.5rem;
+  }
 }
 
 .section {
+  outline: 1px solid tomato;
   padding-bottom: 6.25rem;
   width: 100%;
   text-align: center;
