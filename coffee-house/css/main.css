@@ -848,21 +848,37 @@ body {
 }
 
 .mobile-app--container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   text-align: left;
+}
+@media only screen and (min-width: 992px) {
+  .mobile-app--container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .mobile-app--wrap {
-  -ms-flex-preferred-size: calc((100% - 6.25rem) / 2);
-      flex-basis: calc((100% - 6.25rem) / 2);
+  outline: 1px solid tomato;
+  margin-bottom: 2.5rem;
+}
+@media only screen and (min-width: 660px) and (max-width: 768.98px) {
+  .mobile-app--wrap:last-child {
+    padding: 0 1.81rem;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .mobile-app--wrap {
+    -ms-flex-preferred-size: calc((100% - 6.25rem) / 2);
+        flex-basis: calc((100% - 6.25rem) / 2);
+    margin: 0;
+  }
 }
 
 .mobile-app__text {
@@ -870,11 +886,19 @@ body {
   font-weight: 400;
 }
 
-.mobile-app--stores {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 1.25rem;
+.mobile-app--stores > li:first-child {
+  margin-bottom: 1.25rem;
+}
+@media only screen and (min-width: 660px) {
+  .mobile-app--stores {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1.25rem;
+  }
+  .mobile-app--stores > li {
+    margin: 0;
+  }
 }
 
 .filter {
