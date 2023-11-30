@@ -11,24 +11,16 @@
   background-color: getColor('bg-body');
   border-radius: 6.25rem;
 
-  &__text {
-    transform: translateX(0.875rem);
-    @include animated(transform);
+  @include media('tablet') {
+    &__text {
+      transform: translateX(0.875rem);
+      @include animated(transform);
+    }
+    & > svg {
+      stroke: getColor('opacity');
+      @include animated(stroke);
+    }
   }
-  & > svg {
-    stroke: getColor('opacity');
-    @include animated(stroke);
-  }
-
-  // &:hover,
-  // &:focus {
-  //   & > .hero--btn__text {
-  //     transform: translateX(-0);
-  //   }
-  //   & > svg {
-  //     stroke: getColor('text-dark');
-  //   }
-  // }
 }
 @media (hover: hover) {
   .hero--btn:hover,

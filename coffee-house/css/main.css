@@ -308,27 +308,29 @@ body {
   background-color: #e1d4c9;
   border-radius: 6.25rem;
 }
-.hero--btn__text {
-  -webkit-transform: translateX(0.875rem);
-      -ms-transform: translateX(0.875rem);
-          transform: translateX(0.875rem);
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
-  -webkit-transition-duration: 750ms;
-          transition-duration: 750ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.hero--btn > svg {
-  stroke: rgba(0, 0, 0, 0);
-  -webkit-transition-property: stroke;
-  transition-property: stroke;
-  -webkit-transition-duration: 750ms;
-          transition-duration: 750ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+@media only screen and (min-width: 769px) {
+  .hero--btn__text {
+    -webkit-transform: translateX(0.875rem);
+        -ms-transform: translateX(0.875rem);
+            transform: translateX(0.875rem);
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    -webkit-transition-duration: 750ms;
+            transition-duration: 750ms;
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .hero--btn > svg {
+    stroke: rgba(0, 0, 0, 0);
+    -webkit-transition-property: stroke;
+    transition-property: stroke;
+    -webkit-transition-duration: 750ms;
+            transition-duration: 750ms;
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 @media (hover: hover) {
@@ -488,6 +490,11 @@ body {
   .header__menu-page.none {
     display: none;
   }
+  .header__menu-page > svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    gap: 1rem;
+  }
 }
 
 @media only screen and (max-width: 768.98px) {
@@ -504,6 +511,9 @@ body {
     font-size: 2rem;
     line-height: 1.25;
     background-color: #e1d4c9;
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
     -webkit-transition-property: -webkit-transform;
     transition-property: -webkit-transform;
     transition-property: transform;
@@ -514,12 +524,10 @@ body {
             transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
   .nav.is-hidden {
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
-    -webkit-transform: translateX(50%);
-        -ms-transform: translateX(50%);
-            transform: translateX(50%);
+    display: none;
+    -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+            transform: translateX(100%);
   }
 }
 
@@ -616,25 +624,49 @@ body {
   content: "";
   position: absolute;
   top: 0;
-  left: 2.5rem;
-  width: calc(100% - 5rem);
+  left: 1rem;
+  width: calc(100% - 2rem);
   height: 100%;
   background: rgba(64, 63, 61, 0.3);
   border-radius: 2.5rem;
   z-index: 1;
 }
+@media only screen and (min-width: 769px) {
+  .hero--container::before {
+    left: 2.5rem;
+    width: calc(100% - 5rem);
+  }
+}
 
 .hero-wrap {
   position: relative;
   z-index: 2;
-  padding: 6.25rem 0 6.25rem 6.25rem;
+  padding: 3.75rem 1rem;
   max-width: 39.375rem;
+}
+@media only screen and (min-width: 660px) {
+  .hero-wrap {
+    padding: 6.25rem 0 6.25rem 3.75rem;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .hero-wrap {
+    padding-left: 6.25rem;
+  }
 }
 
 .hero--title {
-  font-size: 4.5rem;
-  line-height: 1.05;
+  max-width: 20rem;
+  font-size: 2.61rem;
+  line-height: 1.15;
   color: #e1d4c9;
+}
+@media only screen and (min-width: 660px) {
+  .hero--title {
+    min-width: 35rem;
+    font-size: 4.5rem;
+    line-height: 1.05;
+  }
 }
 
 .text {
@@ -646,13 +678,19 @@ body {
 .hero-video {
   position: absolute;
   top: 0;
-  left: 2.5rem;
-  width: calc(100% - 5rem);
+  left: 1rem;
+  width: calc(100% - 2rem);
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 2.5rem;
   background-color: rgba(64, 63, 61, 0.8);
+}
+@media only screen and (min-width: 769px) {
+  .hero-video {
+    left: 2.5rem;
+    width: calc(100% - 5rem);
+  }
 }
 
 .favorite__slider {

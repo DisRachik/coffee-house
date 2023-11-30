@@ -1,6 +1,7 @@
 // For media rules - set min-width OR max-width for breakpoints
 $breakpoints: (
   'phone': 381px,
+  'mobile': 660px,
   'tablet': 769px,
   'desktop': 1440px,
 );
