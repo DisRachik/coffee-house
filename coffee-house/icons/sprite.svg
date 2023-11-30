@@ -44,5 +44,9 @@
     <symbol id="twitter" viewBox="0 0 32 32">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.333" d="M30.667 4.013s-2.691 1.589-4.187 2.04a5.975 5.975 0 0 0-6.637-1.661A5.979 5.979 0 0 0 16 10.053v1.333a14.211 14.211 0 0 1-12-6.04s-5.333 12 6.667 17.333a15.519 15.519 0 0 1-9.333 2.667c12 6.667 26.667 0 26.667-15.333a5.966 5.966 0 0 0-.107-1.107c1.361-1.342 2.773-4.893 2.773-4.893z"/>
     </symbol>
+    <symbol id="refresh" viewBox="0 0 32 32">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.333" d="M29.184 18c-.965 6.415-6.5 11.333-13.184 11.333-7.364 0-13.333-5.97-13.333-13.333S8.637 2.667 16 2.667c5.467 0 10.166 3.291 12.224 8"/>
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.333" d="M22.667 10.667h5.867a.8.8 0 0 0 .8-.8V4"/>
+    </symbol>
   </defs>
 </svg>

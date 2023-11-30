@@ -66,6 +66,14 @@
   }
 }
 
+.btn--refresh {
+  margin: 2.5rem auto 0;
+
+  @include media('desktop-lg') {
+    display: none;
+  }
+}
+
 .btn__mobile-menu {
   width: 2.75rem;
   height: 2.75rem;
