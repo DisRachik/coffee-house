@@ -99,7 +99,7 @@
   }
 
   @include media('mobile') {
-    flex-basis: calc((100% - (2.5rem)) / 2);
+    flex-basis: calc((100% - (2.5rem + 0.88rem * 2)) / 2);
   }
 
   @include media('desktop-lg') {
@@ -151,6 +151,8 @@
 }
 .gallery-card__text {
   font-weight: 400;
+
+  min-height: 4.5rem;
 }
 .gallery-card__price {
   margin-top: auto;

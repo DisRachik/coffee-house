@@ -8,18 +8,23 @@
   }
 }
 .mobile-app--wrap {
-  outline: 1px solid tomato;
-  margin-bottom: 2.5rem;
-
-  @include min-max('mobile', 'tablet') {
-    &:last-child {
+  &:last-child {
+    margin-top: 2.4rem;
+    @include min-max('mobile', 'tablet') {
+      margin-top: 5rem;
       padding: 0 1.81rem;
     }
   }
 
   @include media('tablet') {
     flex-basis: calc((100% - 6.25rem) / 2);
-    margin: 0;
+
+    &:first-child {
+      margin-top: 1.4rem;
+    }
+    &:last-child {
+      margin-top: 0;
+    }
   }
 }
 
@@ -30,7 +35,7 @@
 
 .mobile-app--stores {
   & > li:first-child {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.1rem;
   }
   @include media('mobile') {
     display: flex;

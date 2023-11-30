@@ -258,7 +258,6 @@ body {
 }
 
 .container {
-  outline: 1px solid green;
   margin: 0 auto;
   padding: 0 1rem;
   max-width: 90rem;
@@ -270,7 +269,6 @@ body {
 }
 
 .section {
-  outline: 1px solid tomato;
   padding-bottom: 6.25rem;
   width: 100%;
   text-align: center;
@@ -708,6 +706,7 @@ body {
 }
 
 .favorite__slider {
+  margin-bottom: 2.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -718,7 +717,11 @@ body {
       -ms-flex-align: center;
           align-items: center;
   gap: 2.5rem;
-  margin-bottom: 2.5rem;
+}
+@media only screen and (min-width: 992px) {
+  .favorite__slider {
+    padding: 0 0.3rem;
+  }
 }
 
 .favorite__list {
@@ -873,12 +876,12 @@ body {
   }
 }
 
-.mobile-app--wrap {
-  outline: 1px solid tomato;
-  margin-bottom: 2.5rem;
+.mobile-app--wrap:last-child {
+  margin-top: 2.4rem;
 }
 @media only screen and (min-width: 660px) and (max-width: 768.98px) {
   .mobile-app--wrap:last-child {
+    margin-top: 5rem;
     padding: 0 1.81rem;
   }
 }
@@ -886,7 +889,12 @@ body {
   .mobile-app--wrap {
     -ms-flex-preferred-size: calc((100% - 6.25rem) / 2);
         flex-basis: calc((100% - 6.25rem) / 2);
-    margin: 0;
+  }
+  .mobile-app--wrap:first-child {
+    margin-top: 1.4rem;
+  }
+  .mobile-app--wrap:last-child {
+    margin-top: 0;
   }
 }
 
@@ -896,7 +904,7 @@ body {
 }
 
 .mobile-app--stores > li:first-child {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.1rem;
 }
 @media only screen and (min-width: 660px) {
   .mobile-app--stores {
@@ -1034,8 +1042,8 @@ body {
 }
 @media only screen and (min-width: 660px) {
   .gallery__card {
-    -ms-flex-preferred-size: calc((100% - 2.5rem) / 2);
-        flex-basis: calc((100% - 2.5rem) / 2);
+    -ms-flex-preferred-size: calc((100% - 4.26rem) / 2);
+        flex-basis: calc((100% - 4.26rem) / 2);
   }
 }
 @media only screen and (min-width: 992px) {
@@ -1112,6 +1120,7 @@ body {
 
 .gallery-card__text {
   font-weight: 400;
+  min-height: 4.5rem;
 }
 
 .gallery-card__price {
@@ -1167,6 +1176,13 @@ body {
   display: -ms-flexbox;
   display: flex;
   gap: 0.75rem;
+}
+
+@media only screen and (min-width: 992px) {
+  .address {
+    padding-top: 0.1rem;
+    padding-left: 0.3rem;
+  }
 }
 
 .address__title {
