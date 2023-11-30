@@ -36,6 +36,12 @@
   }
 }
 
+.favorite--btn {
+  @include media('tablet-visible', max) {
+    display: none;
+  }
+}
+
 .favorite__dotes {
   display: flex;
   justify-content: center;
