@@ -11,24 +11,16 @@
   background-color: getColor('bg-body');
   border-radius: 6.25rem;
 
-  &__text {
-    transform: translateX(0.875rem);
-    @include animated(transform);
+  @include media('tablet') {
+    &__text {
+      transform: translateX(0.875rem);
+      @include animated(transform);
+    }
+    & > svg {
+      stroke: getColor('opacity');
+      @include animated(stroke);
+    }
   }
-  & > svg {
-    stroke: getColor('opacity');
-    @include animated(stroke);
-  }
-
-  // &:hover,
-  // &:focus {
-  //   & > .hero--btn__text {
-  //     transform: translateX(-0);
-  //   }
-  //   & > svg {
-  //     stroke: getColor('text-dark');
-  //   }
-  // }
 }
 @media (hover: hover) {
   .hero--btn:hover,
@@ -57,14 +49,6 @@
   & > svg {
     @include animated(stroke);
   }
-
-  // &:focus {
-  //   background-color: getColor('border-dark');
-
-  //   & > svg {
-  //     stroke: getColor('text-light');
-  //   }
-  // }
 }
 
 @media (hover: hover) {
@@ -75,6 +59,35 @@
     & > svg {
       stroke: getColor('text-light');
     }
+
+    & > span {
+      background-color: getColor('text-light');
+    }
+  }
+}
+
+.btn--refresh {
+  margin: 2.5rem auto 0;
+
+  @include media('desktop-lg') {
+    display: none;
+  }
+}
+
+.btn__mobile-menu {
+  width: 2.75rem;
+  height: 2.75rem;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  & > span {
+    width: 1rem;
+    height: 2px;
+
+    background-color: getColor('text-dark');
+    border-radius: 1rem;
+
+    @include animated(background-color);
   }
 }
 

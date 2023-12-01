@@ -11,9 +11,13 @@ body {
 
 .container {
   margin: 0 auto;
-  padding: 0 2.5rem;
+  padding: 0 1rem;
 
-  width: 90rem;
+  max-width: 90rem;
+
+  @include media('mobile') {
+    padding: 0 2.5rem;
+  }
 }
 
 .section {
@@ -24,8 +28,12 @@ body {
 
 .section__title {
   margin-bottom: 2.5rem;
-  font-size: 3.75rem;
+  font-size: 2rem;
   line-height: 1.25;
+
+  @include media('tablet-visible') {
+    font-size: 3.75rem;
+  }
 
   &--accent {
     color: getColor('text-accent');

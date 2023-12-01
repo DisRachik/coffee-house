@@ -1,12 +1,31 @@
 .mobile-app--container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
   text-align: left;
+
+  @include media('desktop-lg') {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 .mobile-app--wrap {
-  flex-basis: calc((100% - 6.25rem) / 2);
+  &:last-child {
+    margin-top: 2.4rem;
+    @include min-max('mobile', 'tablet') {
+      margin-top: 5rem;
+      padding: 0 1.81rem;
+    }
+  }
+
+  @include media('tablet') {
+    flex-basis: calc((100% - 6.25rem) / 2);
+
+    &:first-child {
+      margin-top: 1.4rem;
+    }
+    &:last-child {
+      margin-top: 0;
+    }
+  }
 }
 
 .mobile-app__text {
@@ -15,6 +34,15 @@
 }
 
 .mobile-app--stores {
-  display: flex;
-  gap: 1.25rem;
+  & > li:first-child {
+    margin-bottom: 1.1rem;
+  }
+  @include media('mobile') {
+    display: flex;
+    gap: 1.25rem;
+
+    & > li {
+      margin: 0;
+    }
+  }
 }
