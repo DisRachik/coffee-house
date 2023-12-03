@@ -69,45 +69,50 @@
           </h2>
 
           <!-- Filters for Menu -->
-          <ul class="filter">
-            <li class="filter__item">
+          <ul class="filter" role="radiogroup">
+            <li
+              class="filter__item"
+              role="radio"
+              aria-checked="true"
+              aria-labelledby="coffee-label"
+            >
               <label class="filter__label">
                 <input
                   type="radio"
                   name="filter__check"
                   class="filter__check"
-                  value="true"
+                  value="coffee"
                   checked
                 />
                 <span class="filter__type">
                   <span class="filter__image">
                     <img src="./icons/cup.png" alt="cup" width="16" height="24" />
                   </span>
-                  <span class="filter__text">Coffee</span>
+                  <span class="filter__text" id="coffee-label">Coffee</span>
                 </span>
               </label>
             </li>
 
-            <li class="filter__item">
+            <li class="filter__item" aria-labelledby="tea-label">
               <label class="filter__label">
-                <input type="radio" name="filter__check" class="filter__check" value="true" />
+                <input type="radio" name="filter__check" class="filter__check" value="tea" />
                 <span class="filter__type">
                   <span class="filter__image">
                     <img src="./icons/tea-kettle.png" alt="tea-kettle" width="16" height="24" />
                   </span>
-                  <span class="filter__text">Tea</span>
+                  <span class="filter__text" id="tea-label">Tea</span>
                 </span>
               </label>
             </li>
 
-            <li class="filter__item">
+            <li class="filter__item" aria-labelledby="dessert-label">
               <label class="filter__label">
-                <input type="radio" name="filter__check" class="filter__check" value="true" />
+                <input type="radio" name="filter__check" class="filter__check" value="dessert" />
                 <span class="filter__type">
                   <span class="filter__image">
                     <img src="./icons/pie.png" alt="piece of pie" width="16" height="24" />
                   </span>
-                  <span class="filter__text">Dessert</span>
+                  <span class="filter__text" id="dessert-label">Dessert</span>
                 </span>
               </label>
             </li>
@@ -499,6 +504,113 @@
         </div>
       </div>
     </footer>
+
+    <!-- Backdrop -->
+    <div class="backdrop backdrop--is-hidden">
+      <!-- Modal -->
+      <div class="modal">
+        <picture class="gallery__image modal__img">
+          <source
+            srcset="./images/menu/coffee/coffee-1.webp 1x, ./images/menu/coffee/coffee-1@2x.webp 2x"
+            type="image/webp"
+          />
+          <source
+            srcset="./images/menu/coffee/coffee-1.jpg 1x, ./images/menu/coffee/coffee-1@2x.jpg 2x"
+            type="image/jpg"
+          />
+          <img
+            src="./images/menu/coffee/coffee-1.jpg"
+            alt="Irish coffee"
+            width="340"
+            height="340"
+            loading="lazy"
+          />
+        </picture>
+
+        <div class="modal__wrap">
+          <div>
+            <h2 class="modal__title">Irish coffee</h2>
+            <p class="modal__description">
+              Fragrant black coffee with Jameson Irish whiskey and whipped milk
+            </p>
+          </div>
+
+          <!-- Pick size - radio group -->
+          <div class="pick" role="radiogroup">
+            <p class="pick__title">Size</p>
+            <div class="pick__wrap">
+              <label class="pick__label" aria-labelledby="small-size">
+                <input type="radio" name="pick-size" class="pick__check" value="small" checked />
+                <span class="pick__type pick__type--radio">
+                  <span class="pick__icon">S</span>
+                  <span class="pick__description" id="small-size">200 ml</span>
+                </span>
+              </label>
+
+              <label class="pick__label" aria-labelledby="medium-size">
+                <input type="radio" name="pick-size" class="pick__check" value="medium" />
+                <span class="pick__type pick__type--radio">
+                  <span class="pick__icon">M</span>
+                  <span class="pick__description" id="medium-size">300 ml</span>
+                </span>
+              </label>
+
+              <label class="pick__label" aria-labelledby="large-size">
+                <input type="radio" name="pick-size" class="pick__check" value="large" />
+                <span class="pick__type pick__type--radio">
+                  <span class="pick__icon">L</span>
+                  <span class="pick__description" id="large-size">400 ml</span>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Pick additives - checkbox group -->
+          <div class="pick" role="group">
+            <p class="pick__title">Additives</p>
+            <div class="pick__wrap">
+              <label class="pick__label" aria-labelledby="sugar-label">
+                <input type="checkbox" name="pick-additives" class="pick__check" value="sugar" />
+                <span class="pick__type">
+                  <span class="pick__icon">1</span>
+                  <span class="pick__description" id="sugar-label">Sugar</span>
+                </span>
+              </label>
+
+              <label class="pick__label" aria-labelledby="cinnamon-label">
+                <input type="checkbox" name="pick-additives" class="pick__check" value="cinnamon" />
+                <span class="pick__type">
+                  <span class="pick__icon">2</span>
+                  <span class="pick__description" id="cinnamon-label">Cinnamon</span>
+                </span>
+              </label>
+
+              <label class="pick__label" aria-labelledby="syrup-label">
+                <input type="checkbox" name="pick-additives" class="pick__check" value="syrup" />
+                <span class="pick__type">
+                  <span class="pick__icon">3</span>
+                  <span class="pick__description" id="syrup-label">Syrup</span>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <p class="modal__price">
+            <span>Total&colon;</span><span class="modal__total">&#36;7.00</span>
+          </p>
+
+          <div class="modal__info">
+            <span>&#9432;</span>
+            <p>
+              The cost is not final. Download our mobile app to see the final price and place your
+              order. Earn loyalty points and enjoy your favorite coffee with up to 20% discount.
+            </p>
+          </div>
+
+          <button type="button" class="modal__btn">Close</button>
+        </div>
+      </div>
+    </div>
 
     <script src="./js/index.js" type="module"></script>
   </body>
