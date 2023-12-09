@@ -31,15 +31,13 @@
 
 .nav {
   @include media('tablet', max) {
-    position: absolute;
-    top: 0;
+    position: fixed;
+    top: 5rem;
     left: 0;
-    z-index: 100;
+    z-index: 9999;
 
     width: 100vw;
-    height: calc(100vh - 5rem);
-    min-height: 45.25rem;
-    margin-top: 5rem;
+    height: 100vh;
     padding: 3.75rem 0;
 
     font-size: 2rem;
@@ -47,16 +45,22 @@
 
     background-color: getColor('bg-body');
 
-    transform: translateX(0);
-    @include animated(transform);
+    overflow-y: auto;
 
-    &.is-hidden {
-      // opacity: 0;
-      // pointer-events: none;
-      // visibility: hidden;
-      display: none;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transform: translateX(100%);
+    $value-list: transform, opacity, visibility;
+    @include animated($value-list);
 
-      transform: translateX(100%);
+    &.is-open {
+      position: absolute;
+      opacity: 1;
+      pointer-events: auto;
+      visibility: visible;
+
+      transform: translateX(0);
     }
   }
 }

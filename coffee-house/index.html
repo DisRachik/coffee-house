@@ -25,7 +25,7 @@
         </a>
 
         <!-- Navigation -->
-        <nav class="nav is-hidden">
+        <nav class="nav">
           <ul class="nav__items">
             <li class="nav__item"><a href="#favorite" class="nav__link">Favorite coffee</a></li>
             <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
@@ -50,7 +50,15 @@
         </a>
 
         <!-- Mobile menu -->
-        <button class="btn btn__mobile-menu" type="button"><span></span><span></span></button>
+        <button
+          class="btn btn__mobile-menu"
+          type="button"
+          aria-label="Open mobile-menu"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span>
+        </button>
       </div>
     </header>
 
