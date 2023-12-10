@@ -16,4 +16,13 @@ const closeMenu = (e) => {
 export const handleMenuToggle = () => {
   mobileMenuBtn.addEventListener('click', toggleMenu);
   mobileMenu.addEventListener('click', closeMenu);
+
+  window.matchMedia('(max-width: 768px)').addEventListener('change', (e) => {
+    if (e.matches) return;
+
+    mobileMenuBtn.setAttribute('aria-expanded', false);
+    mobileMenu.classList.remove('is-open');
+    mobileMenuBtn.classList.remove('icon-close');
+    document.body.classList.remove('no-scroll');
+  });
 };
