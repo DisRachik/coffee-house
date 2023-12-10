@@ -1,10 +1,12 @@
-import { handleMenuToggle } from './mobile-menu.js';
+import { handleMenuToggle } from './mobile-menu/mobile-menu.js';
 import { filterCategory, sortByValue } from './gallery/sort-by-value.js';
 import { renderCards } from './gallery/render-cards.js';
+import { openModal } from './modal/modal.js';
 
 const gallery = document.querySelector('.gallery');
 const filterList = document.querySelector('.filter');
 const btnRefresh = document.querySelector('.btn--refresh');
+
 let products = [];
 let cardsForRender = null;
 let refreshCounter = 1;
@@ -45,10 +47,25 @@ fetch('./data/products.json')
     console.error('Error fetching data:', error);
   });
 
-filterList.addEventListener('change', (event) => {
+filterList.addEventListener('change', () => {
   renderCardsInGallery();
 });
 
 window.matchMedia('(min-width: 993px)').addEventListener('change', (e) => {
   if (e.matches || !e.matches) renderCardsInGallery();
 });
+
+const onCardClick = (e) => {
+  const isCardProduct = e.target.closest('button');
+
+  if (!isCardProduct) {
+    return;
+  }
+
+  const drinkName = isCardProduct.dataset.card;
+
+  const drinkData = products.find(({ name }) => name === drinkName);
+  openModal(drinkData);
+};
+
+gallery.addEventListener('click', onCardClick);

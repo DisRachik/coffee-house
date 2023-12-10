@@ -1,5 +1,5 @@
 .backdrop {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -11,7 +11,7 @@
 
   background-color: getColor('bg-backdrop');
 
-  overflow-y: scroll;
+  overflow-y: auto;
 
   $value-list: opacity, visibility;
   @include animated($value-list);

@@ -233,23 +233,7 @@
     <div class="backdrop backdrop--is-hidden">
       <!-- Modal -->
       <div class="modal">
-        <picture class="gallery__image modal__img">
-          <source
-            srcset="./images/menu/coffee/coffee-1.webp 1x, ./images/menu/coffee/coffee-1@2x.webp 2x"
-            type="image/webp"
-          />
-          <source
-            srcset="./images/menu/coffee/coffee-1.jpg 1x, ./images/menu/coffee/coffee-1@2x.jpg 2x"
-            type="image/jpg"
-          />
-          <img
-            src="./images/menu/coffee/coffee-1.jpg"
-            alt="Irish coffee"
-            width="340"
-            height="340"
-            loading="lazy"
-          />
-        </picture>
+        <div class="gallery__wrap-image"></div>
 
         <div class="modal__wrap">
           <div>
@@ -262,65 +246,17 @@
           <!-- Pick size - radio group -->
           <div class="pick" role="radiogroup">
             <p class="pick__title">Size</p>
-            <div class="pick__wrap">
-              <label class="pick__label" aria-labelledby="small-size">
-                <input type="radio" name="pick-size" class="pick__check" value="small" checked />
-                <span class="pick__type pick__type--radio">
-                  <span class="pick__icon">S</span>
-                  <span class="pick__description" id="small-size">200 ml</span>
-                </span>
-              </label>
-
-              <label class="pick__label" aria-labelledby="medium-size">
-                <input type="radio" name="pick-size" class="pick__check" value="medium" />
-                <span class="pick__type pick__type--radio">
-                  <span class="pick__icon">M</span>
-                  <span class="pick__description" id="medium-size">300 ml</span>
-                </span>
-              </label>
-
-              <label class="pick__label" aria-labelledby="large-size">
-                <input type="radio" name="pick-size" class="pick__check" value="large" />
-                <span class="pick__type pick__type--radio">
-                  <span class="pick__icon">L</span>
-                  <span class="pick__description" id="large-size">400 ml</span>
-                </span>
-              </label>
-            </div>
+            <div class="pick__wrap js-drink-size"></div>
           </div>
 
           <!-- Pick additives - checkbox group -->
           <div class="pick" role="group">
             <p class="pick__title">Additives</p>
-            <div class="pick__wrap">
-              <label class="pick__label" aria-labelledby="sugar-label">
-                <input type="checkbox" name="pick-additives" class="pick__check" value="sugar" />
-                <span class="pick__type">
-                  <span class="pick__icon">1</span>
-                  <span class="pick__description" id="sugar-label">Sugar</span>
-                </span>
-              </label>
-
-              <label class="pick__label" aria-labelledby="cinnamon-label">
-                <input type="checkbox" name="pick-additives" class="pick__check" value="cinnamon" />
-                <span class="pick__type">
-                  <span class="pick__icon">2</span>
-                  <span class="pick__description" id="cinnamon-label">Cinnamon</span>
-                </span>
-              </label>
-
-              <label class="pick__label" aria-labelledby="syrup-label">
-                <input type="checkbox" name="pick-additives" class="pick__check" value="syrup" />
-                <span class="pick__type">
-                  <span class="pick__icon">3</span>
-                  <span class="pick__description" id="syrup-label">Syrup</span>
-                </span>
-              </label>
-            </div>
+            <div class="pick__wrap js-drink-additives"></div>
           </div>
 
           <p class="modal__price">
-            <span>Total&colon;</span><span class="modal__total">&#36;7.00</span>
+            <span>Total&colon;</span><span class="modal__total">&#36;<span>7.00</span></span>
           </p>
 
           <div class="modal__info">

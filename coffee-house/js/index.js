@@ -1,3 +1,3 @@
-import { handleMenuToggle } from './mobile-menu.js';
+import { handleMenuToggle } from './mobile-menu/mobile-menu.js';
 
 handleMenuToggle();

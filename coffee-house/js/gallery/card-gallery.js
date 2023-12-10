@@ -1,13 +1,4 @@
-const stringWithHyphens = (str) =>
-  str
-    .split('')
-    .map((ch) => {
-      if (ch === ' ') {
-        return '-';
-      }
-      return ch.toLowerCase();
-    })
-    .join('');
+import { stringWithHyphens } from '../helpers/stringWithHyphens.js';
 
 export const cardGallery = (data) => {
   return data.map((item) => {
@@ -15,7 +6,7 @@ export const cardGallery = (data) => {
     const imgName = stringWithHyphens(name);
 
     return `<li class="gallery__card">
-              <a href="javascript:void(0);" class="gallery__link">
+              <button type="button" class="gallery__link" aria-label="Product details ${name}" data-card="${name}">
                 <picture class="gallery__image">
                   <source
                     srcset="
@@ -36,7 +27,6 @@ export const cardGallery = (data) => {
                     alt="${name}"
                     width="340"
                     height="340"
-                    loading="lazy"
                   />
                 </picture>
 
@@ -47,7 +37,7 @@ export const cardGallery = (data) => {
                   </p>
                   <p class="gallery-card__price">&#36;${price}</p>
                 </div>
-              </a>
+              </button>
             </li>`;
   });
 };
