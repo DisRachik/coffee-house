@@ -69,7 +69,7 @@
 .btn--refresh {
   margin: 2.5rem auto 0;
 
-  @include media('desktop-lg') {
+  &.is-active {
     display: none;
   }
 }

@@ -10,12 +10,11 @@ const stringWithHyphens = (str) =>
     .join('');
 
 export const cardGallery = (data) => {
-  return data
-    .map((item) => {
-      const { category, name, description, price } = item;
-      const imgName = stringWithHyphens(name);
+  return data.map((item) => {
+    const { category, name, description, price } = item;
+    const imgName = stringWithHyphens(name);
 
-      return `<li class="gallery__card">
+    return `<li class="gallery__card">
               <a href="javascript:void(0);" class="gallery__link">
                 <picture class="gallery__image">
                   <source
@@ -50,6 +49,5 @@ export const cardGallery = (data) => {
                 </div>
               </a>
             </li>`;
-    })
-    .join('');
+  });
 };

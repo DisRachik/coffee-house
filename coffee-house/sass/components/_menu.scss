@@ -94,19 +94,12 @@
   border: 1px solid getColor('border-light');
   overflow: hidden;
 
-  &:nth-child(n + 5) {
-    display: none;
-  }
-
   @include media('mobile') {
     flex-basis: calc((100% - (2.5rem + 0.88rem * 2)) / 2);
   }
 
   @include media('desktop-lg') {
     flex-basis: calc((100% - (2.5rem * 3)) / 4);
-    &:nth-child(n + 5) {
-      display: list-item;
-    }
   }
 }
 

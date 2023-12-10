@@ -1,27 +1,54 @@
 import { handleMenuToggle } from './mobile-menu.js';
-import { cardGallery } from './gallery/card-gallery.js';
 import { filterCategory, sortByValue } from './gallery/sort-by-value.js';
+import { renderCards } from './gallery/render-cards.js';
 
 const gallery = document.querySelector('.gallery');
 const filterList = document.querySelector('.filter');
+const btnRefresh = document.querySelector('.btn--refresh');
 let products = [];
+let cardsForRender = null;
+let refreshCounter = 1;
 
 handleMenuToggle();
+
+const visibleRefreshBtn = () => {
+  if (cardsForRender.length <= refreshCounter) {
+    btnRefresh.classList.add('is-active');
+    return;
+  }
+  btnRefresh.classList.remove('is-active');
+  refreshCounter = 1;
+};
+
+const renderCardsInGallery = () => {
+  const cards = sortByValue(products, filterCategory(filterList));
+  cardsForRender = renderCards(cards);
+  gallery.innerHTML = cardsForRender[refreshCounter - 1];
+
+  visibleRefreshBtn();
+};
+
+btnRefresh.addEventListener('click', () => {
+  gallery.insertAdjacentHTML('beforeend', cardsForRender[refreshCounter]);
+  refreshCounter += 1;
+  visibleRefreshBtn();
+});
 
 fetch('./data/products.json')
   .then((res) => res.json())
   .then((res) => {
     products.push(...res);
-    console.log(products);
 
-    const cards = sortByValue(products, filterCategory(filterList));
-    gallery.innerHTML = cardGallery(cards);
+    renderCardsInGallery();
   })
   .catch((error) => {
     console.error('Error fetching data:', error);
   });
 
 filterList.addEventListener('change', (event) => {
-  const cards = sortByValue(products, filterCategory(filterList));
-  gallery.innerHTML = cardGallery(cards);
+  renderCardsInGallery();
+});
+
+window.matchMedia('(min-width: 993px)').addEventListener('change', (e) => {
+  if (e.matches || !e.matches) renderCardsInGallery();
 });
