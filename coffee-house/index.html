@@ -113,60 +113,9 @@
               </svg>
             </button>
 
-            <div class="favorite__wrap-slaider">
+            <div class="favorite__slider-wrap">
               <ul class="favorite__list">
-                <li class="favorite-card">
-                  <picture class="favorite-card__image">
-                    <source
-                      srcset="
-                        ./images/favorites/coffee-slider-3-mb.webp    1x,
-                        ./images/favorites/coffee-slider-3-mb@2x.webp 2x
-                      "
-                      type="image/webp"
-                      media="(max-width: 767.98px)"
-                    />
-                    <source
-                      srcset="
-                        ./images/favorites/coffee-slider-3-mb.png    1x,
-                        ./images/favorites/coffee-slider-3-mb@2x.png 2x
-                      "
-                      type="image/png"
-                      media="(max-width: 767.98px)"
-                    />
-                    <source
-                      srcset="
-                        ./images/favorites/coffee-slider-3-dt.webp    1x,
-                        ./images/favorites/coffee-slider-3-dt@2x.webp 2x
-                      "
-                      type="image/webp"
-                      media="(min-width: 768px)"
-                    />
-                    <source
-                      srcset="
-                        ./images/favorites/coffee-slider-3-dt.png    1x,
-                        ./images/favorites/coffee-slider-3-dt@2x.png 2x
-                      "
-                      type="image/png"
-                      media="(min-width: 768px)"
-                    />
-                    <img
-                      src="./images/favorites/coffee-slider-3-mb.png"
-                      alt="Ice coffee"
-                      width="480"
-                      height="480"
-                      loading="lazy"
-                    />
-                  </picture>
-
-                  <h3 class="favorite-card__title">Ice coffee</h3>
-                  <p class="favorite-card__text">
-                    A popular summer drink that tones and invigorates. Prepared from coffee, milk
-                    and ice.
-                  </p>
-                  <p class="favorite-card__price">&#36;4.50</p>
-                </li>
-
-                <li class="favorite-card">
+                <li class="favorite-card first">
                   <picture class="favorite-card__image">
                     <source
                       srcset="
@@ -217,7 +166,7 @@
                   <p class="favorite-card__price">&#36;5.50</p>
                 </li>
 
-                <li class="favorite-card">
+                <li class="favorite-card second">
                   <picture class="favorite-card__image">
                     <source
                       srcset="
@@ -267,6 +216,57 @@
                   </p>
                   <p class="favorite-card__price">&#36;5.00</p>
                 </li>
+
+                <li class="favorite-card therd">
+                  <picture class="favorite-card__image">
+                    <source
+                      srcset="
+                        ./images/favorites/coffee-slider-3-mb.webp    1x,
+                        ./images/favorites/coffee-slider-3-mb@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(max-width: 767.98px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/favorites/coffee-slider-3-mb.png    1x,
+                        ./images/favorites/coffee-slider-3-mb@2x.png 2x
+                      "
+                      type="image/png"
+                      media="(max-width: 767.98px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/favorites/coffee-slider-3-dt.webp    1x,
+                        ./images/favorites/coffee-slider-3-dt@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/favorites/coffee-slider-3-dt.png    1x,
+                        ./images/favorites/coffee-slider-3-dt@2x.png 2x
+                      "
+                      type="image/png"
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      src="./images/favorites/coffee-slider-3-mb.png"
+                      alt="Ice coffee"
+                      width="480"
+                      height="480"
+                      loading="lazy"
+                    />
+                  </picture>
+
+                  <h3 class="favorite-card__title">Ice coffee</h3>
+                  <p class="favorite-card__text">
+                    A popular summer drink that tones and invigorates. Prepared from coffee, milk
+                    and ice.
+                  </p>
+                  <p class="favorite-card__price">&#36;4.50</p>
+                </li>
               </ul>
             </div>
 
@@ -277,7 +277,7 @@
             </button>
           </div>
 
-          <ul class="favorite__dotes">
+          <ul class="favorite__dots">
             <li class="favorite__dot active"></li>
             <li class="favorite__dot"></li>
             <li class="favorite__dot"></li>

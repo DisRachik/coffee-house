@@ -737,8 +737,35 @@ body {
 
 .favorite__slider {
   position: relative;
-  outline: 1px solid green;
   margin-bottom: 2.5rem;
+}
+
+.favorite__slider-wrap {
+  outline: 1px solid green;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  width: 100%;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 381px) {
+  .favorite__slider-wrap {
+    width: 21.75rem;
+  }
+}
+@media only screen and (min-width: 660px) {
+  .favorite__slider-wrap {
+    width: 30.5rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .favorite__slider-wrap {
+    width: 30rem;
+  }
 }
 
 .favorite__list {
@@ -748,14 +775,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  overflow: hidden;
-}
-
-.favorite-card {
-  outline: 1px solid tomato;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  width: 100%;
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
   transition-property: transform;
@@ -765,30 +784,11 @@ body {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-@media only screen and (min-width: 381px) {
-  .favorite-card {
-    width: 21.75rem;
-  }
-}
-@media only screen and (min-width: 992px) {
-  .favorite-card {
-    width: 30.5rem;
-  }
-}
-@media only screen and (min-width: 992px) {
-  .favorite-card {
-    width: 30rem;
-  }
-}
-.favorite-card:first-child {
-  -webkit-transform: translateX(-100%);
-      -ms-transform: translateX(-100%);
-          transform: translateX(-100%);
-}
-.favorite-card:last-child {
-  -webkit-transform: translateX(100%);
-      -ms-transform: translateX(100%);
-          transform: translateX(100%);
+
+.favorite-card {
+  outline: 1px solid tomato;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 .favorite-card__image {
   margin: 0 auto 1.25rem;
@@ -823,7 +823,7 @@ body {
   right: 0.25rem;
 }
 
-.favorite__dotes {
+.favorite__dots {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
