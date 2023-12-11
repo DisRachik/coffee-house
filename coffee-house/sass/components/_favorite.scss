@@ -77,9 +77,7 @@
 
   overflow: hidden;
 
-  &::after {
-    content: '';
-
+  & > .favorite__dot--bg {
     display: block;
     width: 100%;
     height: 100%;
@@ -88,12 +86,27 @@
 
     transform: translateX(-100%);
   }
+
   &.active {
-    &::after {
+    cursor: auto;
+    & > .favorite__dot--bg {
       transform: translateX(0);
       transition-property: transform;
       transition-duration: 7000ms;
       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
+
+    &.hovered {
+      transform: translateX(0);
+    }
   }
 }
+// .favorite__dot--bg {
+//   display: block;
+//   width: 100%;
+//   height: 100%;
+
+//   background-color: getColor('border-dark');
+
+//   transform: translateX(-100%);
+// }

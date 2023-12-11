@@ -2,12 +2,14 @@ const sliderStrip = document.querySelector('.favorite__list');
 const imagesCards = document.querySelectorAll('.favorite-card');
 
 const dots = document.querySelectorAll('.favorite__dot');
+const fillerForDots = document.querySelectorAll('.favorite__dot--bg');
 
 let width = null;
 let count = 0;
 
 const timeForAnimation = 7000;
 let timerId = null;
+let hoverStartTime = 0;
 
 export const initSlider = () => {
   width = document.querySelector('.favorite__slider-wrap').offsetWidth;
@@ -28,8 +30,10 @@ export const rollSlider = () => {
 export const activeDot = (el) => {
   for (const dot of dots) {
     dot.classList.remove('active');
+    dot.firstElementChild.style.transitionDuration = '';
   }
   dots[el].classList.add('active');
+  dots[el].firstElementChild.style.transitionDuration = timeForAnimation + 'ms';
 };
 
 export const flipSliderRight = () => {
@@ -40,6 +44,7 @@ export const flipSliderRight = () => {
 
   activeDot(count);
   rollSlider();
+  animationForSlider();
 };
 export const flipSliderLeft = () => {
   count -= 1;
