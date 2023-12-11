@@ -69,7 +69,7 @@
 .btn--refresh {
   margin: 2.5rem auto 0;
 
-  @include media('desktop-lg') {
+  &.is-active {
     display: none;
   }
 }
@@ -81,13 +81,22 @@
   gap: 0.5rem;
 
   & > span {
+    display: block;
     width: 1rem;
     height: 2px;
 
     background-color: getColor('text-dark');
     border-radius: 1rem;
 
-    @include animated(background-color);
+    @include animated(transform);
+  }
+  &.icon-close {
+    & > span:first-child {
+      transform: translateY(5px) rotate(-45deg);
+    }
+    & > span:last-child {
+      transform: translateY(-5px) rotate(45deg);
+    }
   }
 }
 

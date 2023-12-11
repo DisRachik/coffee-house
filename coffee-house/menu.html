@@ -25,7 +25,7 @@
         </a>
 
         <!-- Navigation -->
-        <nav class="nav is-hidden">
+        <nav class="nav" id="mobile-menu">
           <ul class="nav__items">
             <li class="nav__item">
               <a href="./index.html#favorite" class="nav__link">Favorite coffee</a>
@@ -54,7 +54,15 @@
         </a>
 
         <!-- Mobile menu -->
-        <button class="btn btn__mobile-menu" type="button"><span></span><span></span></button>
+        <button
+          class="btn btn__mobile-menu"
+          type="button"
+          aria-label="Open mobile-menu"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span>
+        </button>
       </div>
     </header>
 
@@ -119,293 +127,9 @@
           </ul>
 
           <!-- Gallery on menu page -->
-          <ul class="gallery">
-            <li class="gallery__card">
-              <a href="javascript:void(0);" class="gallery__link">
-                <picture class="gallery__image">
-                  <source
-                    srcset="
-                      ./images/menu/coffee/coffee-1.webp    1x,
-                      ./images/menu/coffee/coffee-1@2x.webp 2x
-                    "
-                    type="image/webp"
-                  />
-                  <source
-                    srcset="
-                      ./images/menu/coffee/coffee-1.jpg    1x,
-                      ./images/menu/coffee/coffee-1@2x.jpg 2x
-                    "
-                    type="image/jpg"
-                  />
-                  <img
-                    src="./images/menu/coffee/coffee-1.jpg"
-                    alt="Irish coffee"
-                    width="340"
-                    height="340"
-                    loading="lazy"
-                  />
-                </picture>
+          <ul class="gallery"></ul>
 
-                <div class="gallery-card__info">
-                  <h2 class="gallery-card__title">Irish coffee</h2>
-                  <p class="gallery-card__text">
-                    Fragrant black coffee with Jameson Irish whiskey and whipped milk
-                  </p>
-                  <p class="gallery-card__price">&#36;7.00</p>
-                </div>
-              </a>
-            </li>
-
-            <li class="gallery__card">
-              <a href="javascript:void(0);" class="gallery__link">
-                <picture class="gallery__image">
-                  <source
-                    srcset="
-                      ./images/menu/coffee/coffee-2.webp    1x,
-                      ./images/menu/coffee/coffee-2@2x.webp 2x
-                    "
-                    type="image/webp"
-                  />
-                  <source
-                    srcset="
-                      ./images/menu/coffee/coffee-2.jpg    1x,
-                      ./images/menu/coffee/coffee-2@2x.jpg 2x
-                    "
-                    type="image/jpg"
-                  />
-                  <img
-                    src="./images/menu/coffee/coffee-2.jpg"
-                    alt="Kahlua coffee"
-                    width="340"
-                    height="340"
-                    loading="lazy"
-                  />
-                </picture>
-
-                <div class="gallery-card__info">
-                  <h2 class="gallery-card__title">Kahlua coffee</h2>
-                  <p class="gallery-card__text">
-                    Classic coffee with milk and Kahlua liqueur under a cap of frothed milk
-                  </p>
-                  <p class="gallery-card__price">&#36;7.00</p>
-                </div>
-              </a>
-            </li>
-
-            <li class="gallery__card">
-              <a href="javascript:void(0);" class="gallery__link">
-                <picture class="gallery__image">
-                  <source
-                    srcset="
-                      ./images/menu/coffee/coffee-3.webp    1x,
-                      ./images/menu/coffee/coffee-3@2x.webp 2x
-                    "
-                    type="image/webp"
-                  />
-                  <source
-                    srcset="
-                      ./images/menu/coffee/coffee-3.jpg    1x,
-                      ./images/menu/coffee/coffee-3@2x.jpg 2x
-                    "
-                    type="image/jpg"
-                  />
-                  <img
-                    src="./images/menu/coffee/coffee-3.jpg"
-                    alt="Honey raf"
-                    width="340"
-                    height="340"
-                    loading="lazy"
-                  />
-                </picture>
-
-                <div class="gallery-card__info">
-                  <h2 class="gallery-card__title">Honey raf</h2>
-                  <p class="gallery-card__text">
-                    Espresso with frothed milk, cream and aromatic honey
-                  </p>
-                  <p class="gallery-card__price">&#36;5.50</p>
-                </div>
-              </a>
-            </li>
-
-            <li class="gallery__card">
-              <a href="javascript:void(0);" class="gallery__link">
-                <picture class="gallery__image">
-                  <source
-                    srcset="
-                      ./images/menu/coffee/coffee-4.webp    1x,
-                      ./images/menu/coffee/coffee-4@2x.webp 2x
-                    "
-                    type="image/webp"
-                  />
-                  <source
-                    srcset="
-                      ./images/menu/coffee/coffee-4.jpg    1x,
-                      ./images/menu/coffee/coffee-4@2x.jpg 2x
-                    "
-                    type="image/jpg"
-                  />
-                  <img
-                    src="./images/menu/coffee/coffee-4.jpg"
-                    alt="Ice cappuccino"
-                    width="340"
-                    height="340"
-                    loading="lazy"
-                  />
-                </picture>
-
-                <div class="gallery-card__info">
-                  <h2 class="gallery-card__title">Ice cappuccino</h2>
-                  <p class="gallery-card__text">
-                    Cappuccino with soft thick foam in summer version with ice
-                  </p>
-                  <p class="gallery-card__price">&#36;5.00</p>
-                </div>
-              </a>
-            </li>
-
-            <li class="gallery__card">
-              <a href="javascript:void(0);" class="gallery__link">
-                <picture class="gallery__image">
-                  <source
-                    srcset="
-                      ./images/menu/coffee/coffee-5.webp    1x,
-                      ./images/menu/coffee/coffee-5@2x.webp 2x
-                    "
-                    type="image/webp"
-                  />
-                  <source
-                    srcset="
-                      ./images/menu/coffee/coffee-5.jpg    1x,
-                      ./images/menu/coffee/coffee-5@2x.jpg 2x
-                    "
-                    type="image/jpg"
-                  />
-                  <img
-                    src="./images/menu/coffee/coffee-5.jpg"
-                    alt="Espresso"
-                    width="340"
-                    height="340"
-                    loading="lazy"
-                  />
-                </picture>
-
-                <div class="gallery-card__info">
-                  <h2 class="gallery-card__title">Espresso</h2>
-                  <p class="gallery-card__text">Classic black coffee</p>
-                  <p class="gallery-card__price">&#36;4.50</p>
-                </div>
-              </a>
-            </li>
-
-            <li class="gallery__card">
-              <a href="javascript:void(0);" class="gallery__link">
-                <picture class="gallery__image">
-                  <source
-                    srcset="
-                      ./images/menu/coffee/coffee-6.webp    1x,
-                      ./images/menu/coffee/coffee-6@2x.webp 2x
-                    "
-                    type="image/webp"
-                  />
-                  <source
-                    srcset="
-                      ./images/menu/coffee/coffee-6.jpg    1x,
-                      ./images/menu/coffee/coffee-6@2x.jpg 2x
-                    "
-                    type="image/jpg"
-                  />
-                  <img
-                    src="./images/menu/coffee/coffee-6.jpg"
-                    alt="Latte"
-                    width="340"
-                    height="340"
-                    loading="lazy"
-                  />
-                </picture>
-
-                <div class="gallery-card__info">
-                  <h2 class="gallery-card__title">Latte</h2>
-                  <p class="gallery-card__text">
-                    Espresso coffee with the addition of steamed milk and dense milk foam
-                  </p>
-                  <p class="gallery-card__price">&#36;5.50</p>
-                </div>
-              </a>
-            </li>
-
-            <li class="gallery__card">
-              <a href="javascript:void(0);" class="gallery__link">
-                <picture class="gallery__image">
-                  <source
-                    srcset="
-                      ./images/menu/coffee/coffee-7.webp    1x,
-                      ./images/menu/coffee/coffee-7@2x.webp 2x
-                    "
-                    type="image/webp"
-                  />
-                  <source
-                    srcset="
-                      ./images/menu/coffee/coffee-7.jpg    1x,
-                      ./images/menu/coffee/coffee-7@2x.jpg 2x
-                    "
-                    type="image/jpg"
-                  />
-                  <img
-                    src="./images/menu/coffee/coffee-7.jpg"
-                    alt="Latte macchiato"
-                    width="340"
-                    height="340"
-                    loading="lazy"
-                  />
-                </picture>
-
-                <div class="gallery-card__info">
-                  <h2 class="gallery-card__title">Latte macchiato</h2>
-                  <p class="gallery-card__text">Espresso with frothed milk and chocolate</p>
-                  <p class="gallery-card__price">&#36;5.50</p>
-                </div>
-              </a>
-            </li>
-
-            <li class="gallery__card">
-              <a href="javascript:void(0);" class="gallery__link">
-                <picture class="gallery__image">
-                  <source
-                    srcset="
-                      ./images/menu/coffee/coffee-8.webp    1x,
-                      ./images/menu/coffee/coffee-8@2x.webp 2x
-                    "
-                    type="image/webp"
-                  />
-                  <source
-                    srcset="
-                      ./images/menu/coffee/coffee-8.jpg    1x,
-                      ./images/menu/coffee/coffee-8@2x.jpg 2x
-                    "
-                    type="image/jpg"
-                  />
-                  <img
-                    src="./images/menu/coffee/coffee-8.jpg"
-                    alt="Coffee with cognac"
-                    width="340"
-                    height="340"
-                    loading="lazy"
-                  />
-                </picture>
-
-                <div class="gallery-card__info">
-                  <h2 class="gallery-card__title">Coffee with cognac</h2>
-                  <p class="gallery-card__text">
-                    Fragrant black coffee with cognac and whipped cream
-                  </p>
-                  <p class="gallery-card__price">&#36;6.50</p>
-                </div>
-              </a>
-            </li>
-          </ul>
-
-          <button class="btn btn--refresh" type="button">
+          <button class="btn btn--refresh is-active" type="button">
             <svg class="icon" width="24" height="24" aria-label="arrow to left">
               <use href="./icons/sprite.svg#refresh"></use>
             </svg>
@@ -509,23 +233,7 @@
     <div class="backdrop backdrop--is-hidden">
       <!-- Modal -->
       <div class="modal">
-        <picture class="gallery__image modal__img">
-          <source
-            srcset="./images/menu/coffee/coffee-1.webp 1x, ./images/menu/coffee/coffee-1@2x.webp 2x"
-            type="image/webp"
-          />
-          <source
-            srcset="./images/menu/coffee/coffee-1.jpg 1x, ./images/menu/coffee/coffee-1@2x.jpg 2x"
-            type="image/jpg"
-          />
-          <img
-            src="./images/menu/coffee/coffee-1.jpg"
-            alt="Irish coffee"
-            width="340"
-            height="340"
-            loading="lazy"
-          />
-        </picture>
+        <div class="gallery__wrap-image"></div>
 
         <div class="modal__wrap">
           <div>
@@ -538,65 +246,17 @@
           <!-- Pick size - radio group -->
           <div class="pick" role="radiogroup">
             <p class="pick__title">Size</p>
-            <div class="pick__wrap">
-              <label class="pick__label" aria-labelledby="small-size">
-                <input type="radio" name="pick-size" class="pick__check" value="small" checked />
-                <span class="pick__type pick__type--radio">
-                  <span class="pick__icon">S</span>
-                  <span class="pick__description" id="small-size">200 ml</span>
-                </span>
-              </label>
-
-              <label class="pick__label" aria-labelledby="medium-size">
-                <input type="radio" name="pick-size" class="pick__check" value="medium" />
-                <span class="pick__type pick__type--radio">
-                  <span class="pick__icon">M</span>
-                  <span class="pick__description" id="medium-size">300 ml</span>
-                </span>
-              </label>
-
-              <label class="pick__label" aria-labelledby="large-size">
-                <input type="radio" name="pick-size" class="pick__check" value="large" />
-                <span class="pick__type pick__type--radio">
-                  <span class="pick__icon">L</span>
-                  <span class="pick__description" id="large-size">400 ml</span>
-                </span>
-              </label>
-            </div>
+            <div class="pick__wrap js-drink-size"></div>
           </div>
 
           <!-- Pick additives - checkbox group -->
           <div class="pick" role="group">
             <p class="pick__title">Additives</p>
-            <div class="pick__wrap">
-              <label class="pick__label" aria-labelledby="sugar-label">
-                <input type="checkbox" name="pick-additives" class="pick__check" value="sugar" />
-                <span class="pick__type">
-                  <span class="pick__icon">1</span>
-                  <span class="pick__description" id="sugar-label">Sugar</span>
-                </span>
-              </label>
-
-              <label class="pick__label" aria-labelledby="cinnamon-label">
-                <input type="checkbox" name="pick-additives" class="pick__check" value="cinnamon" />
-                <span class="pick__type">
-                  <span class="pick__icon">2</span>
-                  <span class="pick__description" id="cinnamon-label">Cinnamon</span>
-                </span>
-              </label>
-
-              <label class="pick__label" aria-labelledby="syrup-label">
-                <input type="checkbox" name="pick-additives" class="pick__check" value="syrup" />
-                <span class="pick__type">
-                  <span class="pick__icon">3</span>
-                  <span class="pick__description" id="syrup-label">Syrup</span>
-                </span>
-              </label>
-            </div>
+            <div class="pick__wrap js-drink-additives"></div>
           </div>
 
           <p class="modal__price">
-            <span>Total&colon;</span><span class="modal__total">&#36;7.00</span>
+            <span>Total&colon;</span><span class="modal__total">&#36;<span>7.00</span></span>
           </p>
 
           <div class="modal__info">
@@ -612,6 +272,6 @@
       </div>
     </div>
 
-    <script src="./js/index.js" type="module"></script>
+    <script src="./js/menu.js" type="module"></script>
   </body>
 </html>
