@@ -736,40 +736,59 @@ body {
 }
 
 .favorite__slider {
+  position: relative;
+  outline: 1px solid green;
   margin-bottom: 2.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 2.5rem;
-}
-@media only screen and (min-width: 992px) {
-  .favorite__slider {
-    padding: 0 0.3rem;
-  }
 }
 
 .favorite__list {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 21rem;
   overflow: hidden;
 }
 
 .favorite-card {
-  width: 30rem;
+  outline: 1px solid tomato;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 100%;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 750ms;
+          transition-duration: 750ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media only screen and (min-width: 381px) {
+  .favorite-card {
+    width: 21.75rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .favorite-card {
+    width: 30.5rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .favorite-card {
+    width: 30rem;
+  }
+}
+.favorite-card:first-child {
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+.favorite-card:last-child {
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
 }
 .favorite-card__image {
   margin: 0 auto 1.25rem;
@@ -785,10 +804,23 @@ body {
   line-height: 1.25;
 }
 
+.favorite--btn {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
 @media only screen and (max-width: 767.98px) {
   .favorite--btn {
     display: none;
   }
+}
+.favorite--btn__left {
+  left: 0.25rem;
+}
+.favorite--btn__right {
+  right: 0.25rem;
 }
 
 .favorite__dotes {

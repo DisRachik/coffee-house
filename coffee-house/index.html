@@ -107,66 +107,170 @@
           </h2>
 
           <div class="favorite__slider">
-            <button class="btn favorite--btn" type="button">
+            <button class="btn favorite--btn favorite--btn__left" type="button">
               <svg class="icon" width="24" height="24" aria-label="arrow to left">
                 <use href="./icons/sprite.svg#arrow-left"></use>
               </svg>
             </button>
 
-            <ul class="favorite__list">
-              <li class="favorite-card">
-                <picture class="favorite-card__image">
-                  <source
-                    srcset="
-                      ./images/favorites/coffee-slider-1-mb.webp    1x,
-                      ./images/favorites/coffee-slider-1-mb@2x.webp 2x
-                    "
-                    type="image/webp"
-                    media="(max-width: 767.98px)"
-                  />
-                  <source
-                    srcset="
-                      ./images/favorites/coffee-slider-1-mb.png    1x,
-                      ./images/favorites/coffee-slider-1-mb@2x.png 2x
-                    "
-                    type="image/png"
-                    media="(max-width: 767.98px)"
-                  />
-                  <source
-                    srcset="
-                      ./images/favorites/coffee-slider-1-dt.webp    1x,
-                      ./images/favorites/coffee-slider-1-dt@2x.webp 2x
-                    "
-                    type="image/webp"
-                    media="(min-width: 768px)"
-                  />
-                  <source
-                    srcset="
-                      ./images/favorites/coffee-slider-1-dt.png    1x,
-                      ./images/favorites/coffee-slider-1-dt@2x.png 2x
-                    "
-                    type="image/png"
-                    media="(min-width: 768px)"
-                  />
-                  <img
-                    src="./images/favorites/coffee-slider-1-mb.png"
-                    alt="S’mores Frappuccino"
-                    width="480"
-                    height="480"
-                    loading="lazy"
-                  />
-                </picture>
+            <div class="favorite__wrap-slaider">
+              <ul class="favorite__list">
+                <li class="favorite-card">
+                  <picture class="favorite-card__image">
+                    <source
+                      srcset="
+                        ./images/favorites/coffee-slider-3-mb.webp    1x,
+                        ./images/favorites/coffee-slider-3-mb@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(max-width: 767.98px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/favorites/coffee-slider-3-mb.png    1x,
+                        ./images/favorites/coffee-slider-3-mb@2x.png 2x
+                      "
+                      type="image/png"
+                      media="(max-width: 767.98px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/favorites/coffee-slider-3-dt.webp    1x,
+                        ./images/favorites/coffee-slider-3-dt@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/favorites/coffee-slider-3-dt.png    1x,
+                        ./images/favorites/coffee-slider-3-dt@2x.png 2x
+                      "
+                      type="image/png"
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      src="./images/favorites/coffee-slider-3-mb.png"
+                      alt="Ice coffee"
+                      width="480"
+                      height="480"
+                      loading="lazy"
+                    />
+                  </picture>
 
-                <h3 class="favorite-card__title">S’mores Frappuccino</h3>
-                <p class="favorite-card__text">
-                  This new drink takes an espresso and mixes it with brown sugar and cinnamon before
-                  being topped with oat milk.
-                </p>
-                <p class="favorite-card__price">&#36;5.50</p>
-              </li>
-            </ul>
+                  <h3 class="favorite-card__title">Ice coffee</h3>
+                  <p class="favorite-card__text">
+                    A popular summer drink that tones and invigorates. Prepared from coffee, milk
+                    and ice.
+                  </p>
+                  <p class="favorite-card__price">&#36;4.50</p>
+                </li>
 
-            <button class="btn favorite--btn" type="button">
+                <li class="favorite-card">
+                  <picture class="favorite-card__image">
+                    <source
+                      srcset="
+                        ./images/favorites/coffee-slider-1-mb.webp    1x,
+                        ./images/favorites/coffee-slider-1-mb@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(max-width: 767.98px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/favorites/coffee-slider-1-mb.png    1x,
+                        ./images/favorites/coffee-slider-1-mb@2x.png 2x
+                      "
+                      type="image/png"
+                      media="(max-width: 767.98px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/favorites/coffee-slider-1-dt.webp    1x,
+                        ./images/favorites/coffee-slider-1-dt@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/favorites/coffee-slider-1-dt.png    1x,
+                        ./images/favorites/coffee-slider-1-dt@2x.png 2x
+                      "
+                      type="image/png"
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      src="./images/favorites/coffee-slider-1-mb.png"
+                      alt="S’mores Frappuccino"
+                      width="480"
+                      height="480"
+                      loading="lazy"
+                    />
+                  </picture>
+
+                  <h3 class="favorite-card__title">S’mores Frappuccino</h3>
+                  <p class="favorite-card__text">
+                    This new drink takes an espresso and mixes it with brown sugar and cinnamon
+                    before being topped with oat milk.
+                  </p>
+                  <p class="favorite-card__price">&#36;5.50</p>
+                </li>
+
+                <li class="favorite-card">
+                  <picture class="favorite-card__image">
+                    <source
+                      srcset="
+                        ./images/favorites/coffee-slider-2-mb.webp    1x,
+                        ./images/favorites/coffee-slider-2-mb@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(max-width: 767.98px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/favorites/coffee-slider-2-mb.png    1x,
+                        ./images/favorites/coffee-slider-2-mb@2x.png 2x
+                      "
+                      type="image/png"
+                      media="(max-width: 767.98px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/favorites/coffee-slider-2-dt.webp    1x,
+                        ./images/favorites/coffee-slider-2-dt@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/favorites/coffee-slider-2-dt.png    1x,
+                        ./images/favorites/coffee-slider-2-dt@2x.png 2x
+                      "
+                      type="image/png"
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      src="./images/favorites/coffee-slider-2-mb.png"
+                      alt="Caramel Macchiato"
+                      width="480"
+                      height="480"
+                      loading="lazy"
+                    />
+                  </picture>
+
+                  <h3 class="favorite-card__title">Caramel Macchiato</h3>
+                  <p class="favorite-card__text">
+                    Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream
+                    under whipped thick foam.
+                  </p>
+                  <p class="favorite-card__price">&#36;5.00</p>
+                </li>
+              </ul>
+            </div>
+
+            <button class="btn favorite--btn favorite--btn__right" type="button">
               <svg class="icon" width="24" height="24" aria-label="arrow to right">
                 <use href="./icons/sprite.svg#arrow-right"></use>
               </svg>

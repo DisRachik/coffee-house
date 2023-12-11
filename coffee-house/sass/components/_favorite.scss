@@ -1,26 +1,38 @@
 .favorite__slider {
+  position: relative;
+  outline: 1px solid green;
   margin-bottom: 2.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2.5rem;
-
-  @include media('desktop-lg') {
-    padding: 0 0.3rem;
-  }
 }
-
 .favorite__list {
-  flex-grow: 1;
   display: flex;
   justify-content: center;
-  gap: 21rem;
 
   overflow: hidden;
 }
 
 .favorite-card {
-  width: 30rem;
+  outline: 1px solid tomato;
+  flex-shrink: 0;
+  width: 100%;
+
+  @include media('phone') {
+    width: 21.75rem;
+  }
+  @include media('desktop-lg') {
+    width: 30.5rem;
+  }
+  @include media('desktop-lg') {
+    width: 30rem;
+  }
+
+  @include animated(transform);
+
+  &:first-child {
+    transform: translateX(-100%);
+  }
+  &:last-child {
+    transform: translateX(100%);
+  }
 
   &__image {
     margin: 0 auto 1.25rem;
@@ -40,8 +52,19 @@
 }
 
 .favorite--btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
   @include media('tablet-visible', max) {
     display: none;
+  }
+
+  &__left {
+    left: 0.25rem;
+  }
+  &__right {
+    right: 0.25rem;
   }
 }
 

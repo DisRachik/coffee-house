@@ -25,6 +25,7 @@ const visibleRefreshBtn = () => {
 const renderCardsInGallery = () => {
   const cards = sortByValue(products, filterCategory(filterList));
   cardsForRender = renderCards(cards);
+  refreshCounter = 1;
   gallery.innerHTML = cardsForRender[refreshCounter - 1];
 
   visibleRefreshBtn();
