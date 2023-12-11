@@ -6,14 +6,19 @@ const dots = document.querySelectorAll('.favorite__dot');
 let width = null;
 let count = 0;
 
+const timeForAnimation = 7000;
+let timerId = null;
+
 export const initSlider = () => {
   width = document.querySelector('.favorite__slider-wrap').offsetWidth;
   sliderStrip.style.width = `${width * imagesCards.length}px`;
 
   imagesCards.forEach((el) => {
-    console.log(width);
     el.style.width = width + 'px';
   });
+  activeDot(count);
+
+  animationForSlider();
 };
 
 export const rollSlider = () => {
@@ -27,7 +32,7 @@ export const activeDot = (el) => {
   dots[el].classList.add('active');
 };
 
-export const flipSliderLeft = () => {
+export const flipSliderRight = () => {
   count += 1;
   if (count >= imagesCards.length) {
     count = 0;
@@ -36,7 +41,7 @@ export const flipSliderLeft = () => {
   activeDot(count);
   rollSlider();
 };
-export const flipSliderRight = () => {
+export const flipSliderLeft = () => {
   count -= 1;
   if (count < 0) {
     count = imagesCards.length - 1;
@@ -44,4 +49,23 @@ export const flipSliderRight = () => {
 
   activeDot(count);
   rollSlider();
+  animationForSlider();
+};
+
+export const switchSliderByDots = () => {
+  dots.forEach((item, countDot) => {
+    item.addEventListener('click', () => {
+      count = countDot;
+      activeDot(count);
+      rollSlider();
+      animationForSlider();
+    });
+  });
+};
+
+export const animationForSlider = () => {
+  clearInterval(timerId);
+  timerId = setInterval(() => {
+    flipSliderRight();
+  }, timeForAnimation);
 };
