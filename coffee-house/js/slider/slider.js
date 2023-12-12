@@ -32,6 +32,7 @@ export const activeDot = (el) => {
   for (const dot of dots) {
     dot.classList.remove('active');
     dot.firstElementChild.style.transitionDuration = '';
+    dot.firstElementChild.style.transform = '';
   }
   dots[el].classList.add('active');
   dots[el].firstElementChild.style.transitionDuration = timeForAnimation + 'ms';
