@@ -4,6 +4,7 @@
 }
 
 .favorite__slider-wrap {
+  outline: 1px solid tomato;
   overflow: hidden;
 
   display: flex;
@@ -101,12 +102,3 @@
     }
   }
 }
-// .favorite__dot--bg {
-//   display: block;
-//   width: 100%;
-//   height: 100%;
-
-//   background-color: getColor('border-dark');
-
-//   transform: translateX(-100%);
-// }
