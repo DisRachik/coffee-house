@@ -26,21 +26,25 @@ sliderArea.addEventListener('mouseenter', holdSlider);
 sliderArea.addEventListener('mouseleave', continueSlider);
 
 const handlePointerDown = (e) => {
+  startX = e.changedTouches[0].clientX;
   holdSlider();
-  startX = e.clientX;
 };
 
 const handlePointerUp = (e) => {
   continueSlider();
-  const endX = e.clientX;
+
+  let endX = null;
+  endX = e.changedTouches[0].clientX;
   const deltaX = endX - startX;
+  startX = null;
+  endX = null;
 
   if (deltaX > 0) {
     flipSliderLeft();
-  } else if (deltaX < 0) {
+  } else {
     flipSliderRight();
   }
 };
 
-sliderArea.addEventListener('pointerdown', handlePointerDown);
-sliderArea.addEventListener('pointerup', handlePointerUp);
+sliderArea.addEventListener('touchstart', handlePointerDown);
+document.addEventListener('touchend', handlePointerUp);
