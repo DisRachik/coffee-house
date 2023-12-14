@@ -47,6 +47,7 @@
 
     overflow-y: auto;
 
+    display: none;
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
@@ -55,6 +56,7 @@
     @include animated($value-list);
 
     &.is-open {
+      display: block;
       position: absolute;
       opacity: 1;
       pointer-events: auto;
@@ -66,12 +68,14 @@
 }
 
 .nav__items {
+  min-height: 38rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 3.75rem;
 
   @include media('tablet') {
+    min-height: auto;
     flex-direction: row;
     gap: 2.5rem;
   }
@@ -112,6 +116,11 @@
     &::after {
       transform: scaleX(1);
     }
+  }
+}
+.nav__link.header__menu-page {
+  &::after {
+    transform: scaleX(1);
   }
 }
 @media (hover: hover) {

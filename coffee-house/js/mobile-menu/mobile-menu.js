@@ -10,7 +10,8 @@ const toggleMenu = () => {
 };
 
 const closeMenu = (e) => {
-  if (e.target.classList.contains('nav__link')) toggleMenu();
+  const isBurgerActive = window.innerWidth <= 768 || document.body.clientWidth <= 768;
+  if (e.target.classList.contains('nav__link') && isBurgerActive) toggleMenu();
 };
 
 export const handleMenuToggle = () => {
