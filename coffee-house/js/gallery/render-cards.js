@@ -1,6 +1,6 @@
 import { cardGallery } from './card-gallery.js';
 
-const determineCardCount = () => (window.innerWidth > 992 ? 8 : 4);
+const determineCardCount = () => (window.innerWidth > 768 ? 8 : 4);
 
 export const renderCards = (data) => {
   const cardCount = determineCardCount();

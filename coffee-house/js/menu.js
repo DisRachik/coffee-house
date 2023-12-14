@@ -52,7 +52,7 @@ filterList.addEventListener('change', () => {
   renderCardsInGallery();
 });
 
-window.matchMedia('(min-width: 993px)').addEventListener('change', (e) => {
+window.matchMedia('(min-width: 769px)').addEventListener('change', (e) => {
   if (e.matches || !e.matches) renderCardsInGallery();
 });
 
