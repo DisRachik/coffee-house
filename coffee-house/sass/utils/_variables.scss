@@ -1,0 +1,31 @@
+// Color map
+$colors: (
+  'text-accent': #b0907a,
+  'text-light': #e1d4c9,
+  'text-dark': #403f3d,
+
+  'bg-body': #e1d4c9,
+  'bg-container': #665f55,
+  'bg-backdrop': rgba(64, 63, 61, 0.8),
+  'border-light': #c1b6ad,
+  'border-dark': #665f55,
+  'opacity': rgba(0, 0, 0, 0),
+);
+@function getColor($key) {
+  @return map-get($colors, $key);
+}
+
+// Visually-hidden
+%visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

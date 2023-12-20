@@ -1,0 +1,18 @@
+// Initial styles
+@import './base/normalize';
+@import './utils/variables';
+@import './utils/mixin';
+@import './base/fonts';
+@import './base/base';
+
+// Components
+@import './layout/general';
+@import './layout/buttons';
+@import './layout/header';
+@import './components/hero';
+@import './components/favorite';
+@import './components/about';
+@import './components/mobile';
+@import './components/menu';
+@import './layout/footer';
+@import './layout/modal';

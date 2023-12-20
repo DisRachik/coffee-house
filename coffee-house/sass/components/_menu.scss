@@ -1,0 +1,154 @@
+.main--section__title {
+  @include media('desktop-lg') {
+    max-width: 50rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.filter {
+  margin-bottom: 2.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+
+  @include media('tablet-visible') {
+    gap: 1rem;
+  }
+}
+
+.filter__check {
+  appearance: none;
+  position: absolute;
+
+  &:checked + .filter__type {
+    background-color: getColor('bg-container');
+    color: getColor('text-light');
+    cursor: default;
+
+    & > .filter__image {
+      background-color: getColor('bg-body');
+      border-radius: 50%;
+    }
+  }
+}
+.filter__type {
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  border: 1px solid getColor('border-light');
+  border-radius: 6.25rem;
+
+  $value-list: color, background-color;
+  @include animated($value-list);
+
+  cursor: pointer;
+}
+.filter__image {
+  width: 1.875rem;
+  height: 1.875rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: getColor('border-light');
+  border-radius: 50%;
+
+  @include animated(background-color);
+
+  & > img {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+}
+
+@media (hover: hover) {
+  .filter__label:hover {
+    .filter__type {
+      background-color: getColor('bg-container');
+      color: getColor('text-light');
+
+      & > .filter__image {
+        background-color: getColor('bg-body');
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+/* Gallery on menu page */
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+
+.gallery__card {
+  flex-basis: calc((100% - (1.19rem * 2)));
+
+  border-radius: 2.5rem;
+  border: 1px solid getColor('border-light');
+  overflow: hidden;
+
+  @include media('mobile') {
+    flex-basis: calc((100% - (2.5rem + 0.88rem * 2)) / 2);
+  }
+
+  @include media('desktop-lg') {
+    flex-basis: calc((100% - (2.5rem * 3)) / 4);
+  }
+}
+
+.gallery__link {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+@media (hover: hover) {
+  .gallery__link:hover,
+  .gallery__link:focus {
+    & img {
+      transform: scale(1);
+    }
+  }
+}
+
+.gallery__image {
+  width: 100%;
+  border-radius: 2.5rem;
+  overflow: hidden;
+
+  & > img {
+    transform: scale(1.1);
+    @include animated(transform);
+  }
+}
+
+.gallery-card__info {
+  flex-grow: 1;
+  padding: 1.25rem;
+  text-align: left;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+.gallery-card__title,
+.gallery-card__price {
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+.gallery-card__text {
+  font-weight: 400;
+
+  min-height: 4.5rem;
+}
+.gallery-card__price {
+  margin-top: auto;
+}

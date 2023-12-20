@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon  -->
+    <link rel="shortcut icon" href="./icons/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="./icons/favicon.ico" type="image/x-icon" />
+
+    <!-- Title page -->
+    <title>Coffee-House</title>
+
+    <!-- connecting styles -->
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+
+  <body>
+    <!-- Header-block -->
+    <header class="header" id="header">
+      <div class="container header__container">
+        <!-- Logo -->
+        <a href="./" class="header__logo">
+          <img src="./icons/logo.svg" alt="logo company" class="header__logo--img" width="100" />
+        </a>
+
+        <!-- Navigation -->
+        <nav class="nav" id="mobile-menu">
+          <ul class="nav__items">
+            <li class="nav__item">
+              <a href="./index.html#favorite" class="nav__link">Favorite coffee</a>
+            </li>
+            <li class="nav__item"><a href="./index.html#about" class="nav__link">About</a></li>
+            <li class="nav__item">
+              <a href="./index.html#mobile" class="nav__link">Mobile app</a>
+            </li>
+            <li class="nav__item"><a href="#footer" class="nav__link">Contact us</a></li>
+            <li class="nav__item">
+              <a href="#header" class="nav__link header__menu-page"
+                >Menu
+                <svg class="icon" width="20" height="20" aria-label="cup">
+                  <use href="./icons/sprite.svg#coffee-cup"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <a href="javascript:void(0);" class="header__menu-page none"
+          >Menu
+          <svg class="icon" width="20" height="20" aria-label="cup">
+            <use href="./icons/sprite.svg#coffee-cup"></use>
+          </svg>
+        </a>
+
+        <!-- Mobile menu -->
+        <button
+          class="btn btn__mobile-menu"
+          type="button"
+          aria-label="Open mobile-menu"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main-block -->
+    <main>
+      <!-- Menu section -->
+      <section class="section">
+        <div class="container">
+          <h2 class="section__title main--section__title">
+            Behind each of our cups hides an
+            <span class="section__title--accent">amazing surprise</span>
+          </h2>
+
+          <!-- Filters for Menu -->
+          <ul class="filter" role="radiogroup">
+            <li
+              class="filter__item"
+              role="radio"
+              aria-checked="true"
+              aria-labelledby="coffee-label"
+            >
+              <label class="filter__label">
+                <input
+                  type="radio"
+                  name="filter__check"
+                  class="filter__check"
+                  value="coffee"
+                  checked
+                />
+                <span class="filter__type">
+                  <span class="filter__image">
+                    <img src="./icons/cup.png" alt="cup" width="16" height="24" />
+                  </span>
+                  <span class="filter__text" id="coffee-label">Coffee</span>
+                </span>
+              </label>
+            </li>
+
+            <li class="filter__item" aria-labelledby="tea-label">
+              <label class="filter__label">
+                <input type="radio" name="filter__check" class="filter__check" value="tea" />
+                <span class="filter__type">
+                  <span class="filter__image">
+                    <img src="./icons/tea-kettle.png" alt="tea-kettle" width="16" height="24" />
+                  </span>
+                  <span class="filter__text" id="tea-label">Tea</span>
+                </span>
+              </label>
+            </li>
+
+            <li class="filter__item" aria-labelledby="dessert-label">
+              <label class="filter__label">
+                <input type="radio" name="filter__check" class="filter__check" value="dessert" />
+                <span class="filter__type">
+                  <span class="filter__image">
+                    <img src="./icons/pie.png" alt="piece of pie" width="16" height="24" />
+                  </span>
+                  <span class="filter__text" id="dessert-label">Dessert</span>
+                </span>
+              </label>
+            </li>
+          </ul>
+
+          <!-- Gallery on menu page -->
+          <ul class="gallery"></ul>
+
+          <button class="btn btn--refresh is-active" type="button">
+            <svg class="icon" width="24" height="24" aria-label="arrow to left">
+              <use href="./icons/sprite.svg#refresh"></use>
+            </svg>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer-block -->
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="footer--container">
+          <div class="footer__wrap">
+            <h1 class="section__title">
+              Sip, Savor, Smile. <span class="section__title--accent">It’s coffee time!</span>
+            </h1>
+            <!-- socials links -->
+            <ul class="footer__socials">
+              <li class="footer__social-item">
+                <a
+                  href="https://twitter.com/"
+                  class="btn btn--socials"
+                  target="_blank"
+                  rel="noopener  nofollow  noreferrer"
+                  aria-label="Twitter"
+                >
+                  <svg class="btn-icon" width="24" height="24" aria-label="logo Twitter">
+                    <use href="./icons/sprite.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__social-item">
+                <a
+                  href="https://www.instagram.com/"
+                  class="btn btn--socials"
+                  target="_blank"
+                  rel="noopener  nofollow  noreferrer"
+                  aria-label="Instagram"
+                >
+                  <svg class="btn-icon" width="24" height="24" aria-label="logo Instagram">
+                    <use href="./icons/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__social-item">
+                <a
+                  href="https://www.facebook.com/"
+                  class="btn btn--socials"
+                  target="_blank"
+                  rel="noopener  nofollow  noreferrer"
+                  aria-label="Facebook"
+                >
+                  <svg class="btn-icon" width="24" height="24" aria-label="logo Facebook">
+                    <use href="./icons/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- WebStudio contacts -->
+          <address class="address">
+            <p class="address__title">Contact us</p>
+            <ul class="address__items">
+              <li class="address__item">
+                <a
+                  href="https://maps.app.goo.gl/93NEDifoCJj2nB6B9"
+                  class="address__link"
+                  target="_blank"
+                  rel="noopener  nofollow  noreferrer"
+                >
+                  <svg class="icon" width="20" height="20" aria-label="icon pin-alt">
+                    <use href="./icons/sprite.svg#pin-alt"></use>
+                  </svg>
+                  <span>8558 Green Rd&period;&comma; LA</span></a
+                >
+              </li>
+              <li class="address__item">
+                <a href="tel:+16035550123" class="address__link">
+                  <svg class="icon" width="20" height="20" aria-label="icon phone">
+                    <use href="./icons/sprite.svg#phone"></use>
+                  </svg>
+                  <span>&plus;1 &lpar;603&rpar; 555&hyphen;0123</span>
+                </a>
+              </li>
+              <li class="address__item">
+                <p class="address__link">
+                  <svg class="icon" width="20" height="20" aria-label="icon clock">
+                    <use href="./icons/sprite.svg#clock"></use>
+                  </svg>
+                  <span>Mon&hyphen;Sat&colon; 9&colon;00 AM &ndash; 23&colon;00 PM</span>
+                </p>
+              </li>
+            </ul>
+          </address>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Backdrop -->
+    <div class="backdrop backdrop--is-hidden">
+      <!-- Modal -->
+      <div class="modal">
+        <div class="gallery__wrap-image"></div>
+
+        <div class="modal__wrap">
+          <div>
+            <h2 class="modal__title">Irish coffee</h2>
+            <p class="modal__description">
+              Fragrant black coffee with Jameson Irish whiskey and whipped milk
+            </p>
+          </div>
+
+          <!-- Pick size - radio group -->
+          <div class="pick" role="radiogroup">
+            <p class="pick__title">Size</p>
+            <div class="pick__wrap js-drink-size"></div>
+          </div>
+
+          <!-- Pick additives - checkbox group -->
+          <div class="pick" role="group">
+            <p class="pick__title">Additives</p>
+            <div class="pick__wrap js-drink-additives"></div>
+          </div>
+
+          <p class="modal__price">
+            <span>Total&colon;</span><span class="modal__total">&#36;<span>7.00</span></span>
+          </p>
+
+          <div class="modal__info">
+            <span>&#9432;</span>
+            <p>
+              The cost is not final. Download our mobile app to see the final price and place your
+              order. Earn loyalty points and enjoy your favorite coffee with up to 20% discount.
+            </p>
+          </div>
+
+          <button type="button" class="modal__btn">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/menu.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,151 @@
+.hero--btn {
+  margin-top: 2.5rem;
+  width: 12.5rem;
+  padding: 1.25rem 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  background-color: getColor('bg-body');
+  border-radius: 6.25rem;
+
+  @include media('tablet') {
+    &__text {
+      transform: translateX(0.875rem);
+      @include animated(transform);
+    }
+    & > svg {
+      stroke: getColor('opacity');
+      @include animated(stroke);
+    }
+  }
+}
+@media (hover: hover) {
+  .hero--btn:hover,
+  .hero--btn:focus {
+    & > .hero--btn__text {
+      transform: translateX(-0);
+    }
+    & > svg {
+      stroke: getColor('text-dark');
+    }
+  }
+}
+
+.btn {
+  width: 3.75rem;
+  height: 3.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+  border: 1px solid getColor('border-dark');
+
+  @include animated(background-color);
+
+  & > svg {
+    @include animated(stroke);
+  }
+}
+
+@media (hover: hover) {
+  .btn:hover,
+  .btn:focus {
+    background-color: getColor('border-dark');
+
+    & > svg {
+      stroke: getColor('text-light');
+    }
+
+    & > span {
+      background-color: getColor('text-light');
+    }
+  }
+}
+
+.btn--refresh {
+  margin: 2.5rem auto 0;
+
+  &.is-active {
+    display: none;
+  }
+}
+
+.btn__mobile-menu {
+  width: 2.75rem;
+  height: 2.75rem;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  & > span {
+    display: block;
+    width: 1rem;
+    height: 2px;
+
+    background-color: getColor('text-dark');
+    border-radius: 1rem;
+
+    @include animated(transform);
+  }
+  &.icon-close {
+    & > span:first-child {
+      transform: translateY(5px) rotate(-45deg);
+    }
+    & > span:last-child {
+      transform: translateY(-5px) rotate(45deg);
+    }
+  }
+}
+
+.btn--store {
+  width: 12.5rem;
+  padding: 0.75rem 1.25rem;
+
+  display: flex;
+
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid getColor('border-dark');
+  border-radius: 6.25rem;
+
+  $value-list: color, background-color;
+  @include animated($value-list);
+
+  & > svg {
+    fill: currentColor;
+  }
+
+  &__text p:first-child {
+    margin-bottom: 0.125rem;
+    font-size: 0.625rem;
+    line-height: 1.4;
+  }
+}
+@media (hover: hover) {
+  .btn--store:hover,
+  .btn--store:focus {
+    color: getColor('text-light');
+    background-color: getColor('border-dark');
+  }
+}
+
+.btn--socials {
+  border-color: getColor('border-light');
+
+  & > svg {
+    stroke: getColor('text-light');
+    fill: getColor('opacity');
+  }
+}
+@media (hover: hover) {
+  .btn--socials:hover,
+  .btn--socials:focus {
+    background-color: getColor('bg-body');
+    & > svg {
+      stroke: getColor('text-dark');
+    }
+  }
+}

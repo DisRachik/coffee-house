@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+  <defs>
+    <symbol id="app-store" viewBox="0 0 32 32">
+      <path d="M23.739 16.561c-.033-3.554 2.985-5.283 3.123-5.364-1.709-2.429-4.358-2.761-5.289-2.788-2.225-.228-4.383 1.298-5.516 1.298-1.156 0-2.901-1.276-4.782-1.238-2.42.036-4.685 1.403-5.926 3.524-2.563 4.326-.651 10.683 1.804 14.18 1.228 1.713 2.663 3.625 4.542 3.557 1.838-.074 2.524-1.142 4.742-1.142 2.197 0 2.842 1.142 4.758 1.099 1.972-.031 3.214-1.72 4.4-3.448 1.419-1.963 1.989-3.896 2.012-3.995-.046-.015-3.831-1.424-3.868-5.683zM20.12 6.109c.989-1.205 1.665-2.845 1.477-4.509-1.431.062-3.22.965-4.25 2.144-.912 1.039-1.726 2.741-1.516 4.342 1.607.117 3.257-.791 4.289-1.977z"/>
+    </symbol>
+    <symbol id="arrow-left" viewBox="0 0 32 32">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.333" d="M24.667 16H8m0 0 8-8m-8 8 8 8"/>
+    </symbol>
+    <symbol id="arrow-right" viewBox="0 0 32 32">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.333" d="M8 16h16.667m0 0-8-8m8 8-8 8"/>
+    </symbol>
+    <symbol id="clock" viewBox="0 0 32 32">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" d="M16 8v8h8"/>
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" d="M16 29.333c7.364 0 13.333-5.97 13.333-13.333S23.363 2.667 16 2.667C8.636 2.667 2.667 8.637 2.667 16S8.637 29.333 16 29.333z"/>
+    </symbol>
+    <symbol id="close" viewBox="0 0 32 32">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3.429" d="m3.07 3.07 25.86 25.86M3.07 28.93 28.93 3.07"/>
+    </symbol>
+    <symbol id="coffee-cup" viewBox="0 0 32 32">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" d="M22.666 15.627v3.04a9.333 9.333 0 1 1-18.666 0v-3.04c0-.53.43-.96.96-.96h16.747c.53 0 .96.43.96.96zM15.999 12c0-1.333.952-2.667 2.857-2.667a3.81 3.81 0 0 0 3.809-3.81v-.857M10.668 12v-.667a4 4 0 0 1 4-4 2.667 2.667 0 0 0 2.667-2.667v-.667"/>
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" d="M21.334 14.667h3.333a3.333 3.333 0 1 1 0 6.666h-2"/>
+    </symbol>
+    <symbol id="facebook" viewBox="0 0 32 32">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.333" d="M22.667 2.667h-4A6.67 6.67 0 0 0 12 9.334v4H8v5.333h4v10.667h5.333V18.667h4l1.333-5.333h-5.333v-4A1.334 1.334 0 0 1 18.667 8h4V2.667z"/>
+    </symbol>
+    <symbol id="google-play" viewBox="0 0 32 32">
+      <path d="M3.338 2.847c-.322.329-.509.841-.509 1.504V28c0 .663.186 1.175.509 1.504l.079.072 13.592-13.247v-.313L3.417 2.77l-.079.078zM23.18 20.747l-4.526-4.418v-.313l4.531-4.418.102.057 5.366 2.977c1.531.845 1.531 2.235 0 3.085l-5.473 3.029zM22.465 21.512l-4.633-4.517L4.161 30.326c.509.521 1.338.584 2.281.063l16.022-8.877zM22.465 10.833 6.443 1.956c-.943-.516-1.773-.453-2.281.068l13.671 13.325 4.633-4.517z"/>
+    </symbol>
+    <symbol id="instagram" viewBox="0 0 32 32">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.333" d="M16 21.333a5.333 5.333 0 1 0 0-10.667 5.333 5.333 0 0 0 0 10.667z"/>
+      <path stroke-width="1.333" d="M4 21.333V10.666a6.667 6.667 0 0 1 6.667-6.667h10.667a6.667 6.667 0 0 1 6.667 6.667v10.667A6.667 6.667 0 0 1 21.334 28H10.667A6.667 6.667 0 0 1 4 21.333z"/>
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.333" d="m23.333 8.68.013-.015"/>
+    </symbol>
+    <symbol id="menu" viewBox="0 0 32 32">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.667" d="M1.778 8.889h28.444M1.778 23.111h28.444"/>
+    </symbol>
+    <symbol id="phone" viewBox="0 0 32 32">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" d="m24.157 19.603-5.491 1.064c-3.709-1.862-6-4-7.333-7.333l1.027-5.507-1.941-5.16H5.967c-1.804 0-3.224 1.493-2.925 3.272C3.678 9.736 5.396 16.063 10 20.667c4.838 4.838 11.706 7.064 15.821 8.02 1.858.431 3.513-1.021 3.513-2.928v-4.183l-5.176-1.972z"/>
+    </symbol>
+    <symbol id="pin-alt" viewBox="0 0 32 32">
+      <path stroke-width="2.4" d="M26.668 13.333c0 5.891-10.667 16-10.667 16s-10.667-10.109-10.667-16S10.11 2.666 16.001 2.666s10.667 4.776 10.667 10.667z"/>
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" d="M15.999 14.667a1.333 1.333 0 1 0 0-2.667 1.333 1.333 0 0 0 0 2.667z"/>
+    </symbol>
+    <symbol id="twitter" viewBox="0 0 32 32">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.333" d="M30.667 4.013s-2.691 1.589-4.187 2.04a5.975 5.975 0 0 0-6.637-1.661A5.979 5.979 0 0 0 16 10.053v1.333a14.211 14.211 0 0 1-12-6.04s-5.333 12 6.667 17.333a15.519 15.519 0 0 1-9.333 2.667c12 6.667 26.667 0 26.667-15.333a5.966 5.966 0 0 0-.107-1.107c1.361-1.342 2.773-4.893 2.773-4.893z"/>
+    </symbol>
+    <symbol id="refresh" viewBox="0 0 32 32">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.333" d="M29.184 18c-.965 6.415-6.5 11.333-13.184 11.333-7.364 0-13.333-5.97-13.333-13.333S8.637 2.667 16 2.667c5.467 0 10.166 3.291 12.224 8"/>
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.333" d="M22.667 10.667h5.867a.8.8 0 0 0 .8-.8V4"/>
+    </symbol>
+  </defs>
+</svg>

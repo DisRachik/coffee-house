@@ -1,0 +1,42 @@
+// For media rules - set min-width OR max-width for breakpoints
+$breakpoints: (
+  'phone': 381px,
+  'mobile': 660px,
+  'tablet-visible': 768px,
+  'tablet': 769px,
+  'desktop-lg': 992px,
+  'desktop': 1440px,
+);
+@mixin media($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: calc($width - 0.02px);
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+// For media rules - set the range between breakpoints
+@mixin min-max($min-width, $max-width) {
+  @if map_has_key($breakpoints, $min-width) {
+    $min-width: map_get($breakpoints, $min-width);
+
+    @if map_has_key($breakpoints, $max-width) {
+      $max-width: calc(map_get($breakpoints, $max-width) - 0.02px);
+    }
+
+    @media only screen and (min-width: $min-width) and (max-width: $max-width) {
+      @content;
+    }
+  }
+}
+
+// Mixin for animated
+@mixin animated($property...) {
+  transition-property: $property;
+  transition-duration: 750ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
