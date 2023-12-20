@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon  -->
+    <link rel="shortcut icon" href="/coffee-house/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/coffee-house/favicon.ico" type="image/x-icon" />
+
+    <!-- Title page -->
+    <title>Coffee-House</title>
+    <script type="module" crossorigin src="/coffee-house/assets/menu-1e3cd9ac.js"></script>
+    <link rel="modulepreload" crossorigin href="/coffee-house/assets/mobile-menu-32f4a4f8.js">
+    <link rel="stylesheet" href="/coffee-house/assets/mobile-menu.css">
+  </head>
+
+  <body>
+    <!-- Header-block -->
+    <header class="header" id="header">
+      <div class="container header__container">
+        <!-- Logo -->
+        <a href="./" class="header__logo">
+          <img
+            src="/coffee-house/assets/logo.svg"
+            alt="logo company"
+            class="header__logo--img"
+            width="100"
+          />
+        </a>
+
+        <!-- Navigation -->
+        <nav class="nav" id="mobile-menu">
+          <ul class="nav__items">
+            <li class="nav__item">
+              <a href="./index.html#favorite" class="nav__link">Favorite coffee</a>
+            </li>
+            <li class="nav__item"><a href="./index.html#about" class="nav__link">About</a></li>
+            <li class="nav__item">
+              <a href="./index.html#mobile" class="nav__link">Mobile app</a>
+            </li>
+            <li class="nav__item"><a href="#footer" class="nav__link">Contact us</a></li>
+            <li class="nav__item">
+              <a href="#header" class="nav__link header__menu-page"
+                >Menu
+                <svg class="icon" width="20" height="20" aria-label="cup">
+                  <use href="/coffee-house/assets/sprite.svg#coffee-cup"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <a href="javascript:void(0);" class="header__menu-page none"
+          >Menu
+          <svg class="icon" width="20" height="20" aria-label="cup">
+            <use href="/coffee-house/assets/sprite.svg#coffee-cup"></use>
+          </svg>
+        </a>
+
+        <!-- Mobile menu -->
+        <button
+          class="btn btn__mobile-menu"
+          type="button"
+          aria-label="Open mobile-menu"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main-block -->
+    <main>
+      <!-- Menu section -->
+      <section class="section">
+        <div class="container">
+          <h2 class="section__title main--section__title">
+            Behind each of our cups hides an
+            <span class="section__title--accent">amazing surprise</span>
+          </h2>
+
+          <!-- Filters for Menu -->
+          <ul class="filter" role="radiogroup">
+            <li
+              class="filter__item"
+              role="radio"
+              aria-checked="true"
+              aria-labelledby="coffee-label"
+            >
+              <label class="filter__label">
+                <input
+                  type="radio"
+                  name="filter__check"
+                  class="filter__check"
+                  value="coffee"
+                  checked
+                />
+                <span class="filter__type">
+                  <span class="filter__image">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAALCSURBVHgBzVJNTxNRFL3z0em86Xx0CC2lhmihQqnRtBXFBBcsWLjSmLBwi1tj4s6t+BNcslKXsBExhoQ1RA0aQlIR5au0BVroTKfTaTvTdsbXxpgorWtvcjf33XveueceArrE5OQkixASeJ5XotGoMzs7a3frpbs9xOPxG16vlw2GQjt0s6nikobT6dRLdgMxDGMrFoud9ft8437/JRb+ER2ZOI5DZ7NZtlAo9GA2zVKpJONaiSCISqd+4q9h//dvm0+OMul7RfUsWKvWJMRxUK83HI+H17yy/HUwHHkdCA7MdWSCAcjtrY33K28Xric/f4D04SHougFu5IG6WSVkWZLDI5GJ+O2pCV1TA4IkPz8HkkwmaZdjx+ZfvYTj0xLwggCSwIHtUFC3Gdjey8Fm8gBzpyAxPnF3ZXnJF748XAgNjTz7vc7m+lrkwsXQJ1VRhOV3S3CcPoByqQh2o4HZcIB4AQaHIzB6ZRTSmayqlcs3SYe6dX96+ohqAWx8WXuYz+fmGYaR3G4XeHgOOIGH3kAQZH8fIEEEBiHgeQQIscBxCAX6fFOKqiQZN58iFSV3razrL1wu2mtZJpBEi5wNplkDfB3I509BVTWwLAsIkmx7gqIoyJ3ko6JHeJxIJD5iHzWvMi7a46Kp9iAA/pVhgHUz0KpROLHogHuAJgnQNA00vYy1cmBwaMiLz+7Qvb39iyeZw1K9boqOY8PB/m4bQOQ9UGIZMKsGMCQFXixyPpeDol4BFmtEECRei3/Tvg5GKudymTuZ1O5itVrxVSpl2PmRAcu0oL0e5l+rWbCXSgFNY3BJBFGUbFEQF0YHwk//MFs6ne5RT9OPVFV5UNa1YcPQaWw2aLFrDTNut82yKM+w3DonSHMISctjY2P1c479ZTpidXW13zSUSL1hyabZIB27adgkta9p1eOZmZki/LfxE95WMm+YXSs6AAAAAElFTkSuQmCC" alt="cup" width="16" height="24" />
+                  </span>
+                  <span class="filter__text" id="coffee-label">Coffee</span>
+                </span>
+              </label>
+            </li>
+
+            <li class="filter__item" aria-labelledby="tea-label">
+              <label class="filter__label">
+                <input type="radio" name="filter__check" class="filter__check" value="tea" />
+                <span class="filter__type">
+                  <span class="filter__image">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKgSURBVHgB1ZLLS1RRHMd/c++d+8rxASI2uuihFRI5EWW7QqSQtIVhhG36A4IWhbSJYcCNSETUKC0qDSKMqBjMmjJcNEmSOiqmpYNWjM2Mhc2dO97Xueee7h0dkFq1qx/nwHl9P+d3vucH8F/E8NuoL5lR73T09FbA30YoFBLn4t+bPyzG+5dXM2Rm6dv9yYXUsfy+3++nhsfGSvNzyu8PFkzFli85Y2fh3qNwXVH5jghloZDIs6dNQwOWIW2EqOGnQyNR/7W72061nevhCR2NTMz0OhpGFLOFNDG63k3Fyg7XVrUXFpfUlZWX7/d4RBB5GtwuAAVhoBgNvBXgq6z09sfjX7TJoRe+Q40n39zqfbIzl86z8PDg0koadd9+uHv68+piIoOIZBBiN2LZfQ0TksyaJJaSyfhCgjwIvWpzdK8joz0j07NHck9QdPWlyLmZE83HJwSW2m6aCHQDAcIEdIuAqiEwdA0sjIBYGMSi0urc7S4XA5oJjDNenPsY2bWnBixCiwAYMOLAZFkwVNo+CGAgG6obNkwHObsG2YzU0Nra2iEK/N7R8dGfrrzBjwfCUnFJaYHbTQPPs+Bm3UBTFBACYGITTGTmIOmMDCs/VhMH9tVcTaUS9Y31R5uYDYgVj33q0ivUgCCKIIgCsCwDFOW8lgDGVi4bRVFBkmQ7U7R1JZlomZ0cP+MccG0qD/r6jZtjnsISHy/w6xCa3oBgMGyPFFWDrCyDKkt9Ujp9obOzU8oJN0FIbXXVc04UWuwPKbZsoYkMQLYXum2qpiqgZGUbknkfm58/GwwGpbzQ9Xu1+tvbvZxnSx/LCw0UtW6sA8QW1m3ogCGlzge6upObNX9A8nHl8sWDHMc3sSznRcj4ijV1EHMF0UAgYME/G78AIPRXc+W35ZwAAAAASUVORK5CYII=" alt="tea-kettle" width="16" height="24" />
+                  </span>
+                  <span class="filter__text" id="tea-label">Tea</span>
+                </span>
+              </label>
+            </li>
+
+            <li class="filter__item" aria-labelledby="dessert-label">
+              <label class="filter__label">
+                <input type="radio" name="filter__check" class="filter__check" value="dessert" />
+                <span class="filter__type">
+                  <span class="filter__image">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKxSURBVHgBvVPPaxNBFH4zsz+6iU1rgq2loETBigexIFiKF6GX4kFBqn+BKL14E8SDV09CD970LsWD5iBFCpUKNUKoYmNtkGJplaRt2qRJ3B/ZmXm+3UOgioge3N0H8+N73/e9NzsA/+OZm5sz/oThv9toTN0fnb119Wku/3BqcXH2FCKyvyIpzkyng4X8k/7F9SspByZL6/nih8LLwsf38zeJLPEzfh97IZdLfLdrE1bdvXP4weOh0PNg2QLounsDDvUdBS44mJZdTqS672WPjzxijGGHZGFh2uGBvqSUuk1KZ3C7ylrPZqBpMOg9cQwGx8fAdiwQQoDgDDiFbdnzCPpaX/ZCheFeMb269iXHhBglAKMvrpFzDoagAWnFghgCSh9QBaSMgGaGNvXz/qGLl1mrtdTP6tVKKAkUugCqAbq9AxDWAdp1YNgCpjxa92k9IpBE1oYwdQ505nw4cJJ3G8nkp+pW8bUnVNMR2qWaEaRUpEjiqGNVTk6iN7bFBXDTARFsgEJmVlbYQNyTzTeTXw10B7n2gRuakk2CUzCHcg4As1KAoicO4EnQ3AaJBijNUQt1JP6R7PTwjuDGIBcOoNFNyV0UNjVDEGHkCOPQ5AyVAjoAGpNbVG5oONWYxMkMl4n2tIqAShMIaRo5UnEFcSFREjUVwwawoEpzAW2zbzebHfdjEqZZLapea1KgE5DtFvVxlxpZAwy2KXEXlFujZu+BwIjIA9kzAiqTLkX5MUmtnG9Kj8x4W3QilEwgregUyA0NKCQRkwyVw5kC6fuB0ZsoK6VfdEjq3941UDZiBZQu2ZagwhBRag+12kSl15Qvl4QpSga3ltEy11vuduXs2ITbIWk2gxJT/lvtu5+1561Q/augjTUt2cbAweRO9vor/9cbVtg/jW5ocXrCgn98fgADa5IFRbQ9JwAAAABJRU5ErkJggg==" alt="piece of pie" width="16" height="24" />
+                  </span>
+                  <span class="filter__text" id="dessert-label">Dessert</span>
+                </span>
+              </label>
+            </li>
+          </ul>
+
+          <!-- Gallery on menu page -->
+          <ul class="gallery"></ul>
+
+          <button class="btn btn--refresh is-active" type="button">
+            <svg class="icon" width="24" height="24" aria-label="arrow to left">
+              <use href="/coffee-house/assets/sprite.svg#refresh"></use>
+            </svg>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer-block -->
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="footer--container">
+          <div class="footer__wrap">
+            <h1 class="section__title">
+              Sip, Savor, Smile. <span class="section__title--accent">It’s coffee time!</span>
+            </h1>
+            <!-- socials links -->
+            <ul class="footer__socials">
+              <li class="footer__social-item">
+                <a
+                  href="https://twitter.com/"
+                  class="btn btn--socials"
+                  target="_blank"
+                  rel="noopener  nofollow  noreferrer"
+                  aria-label="Twitter"
+                >
+                  <svg class="btn-icon" width="24" height="24" aria-label="logo Twitter">
+                    <use href="/coffee-house/assets/sprite.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__social-item">
+                <a
+                  href="https://www.instagram.com/"
+                  class="btn btn--socials"
+                  target="_blank"
+                  rel="noopener  nofollow  noreferrer"
+                  aria-label="Instagram"
+                >
+                  <svg class="btn-icon" width="24" height="24" aria-label="logo Instagram">
+                    <use href="/coffee-house/assets/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__social-item">
+                <a
+                  href="https://www.facebook.com/"
+                  class="btn btn--socials"
+                  target="_blank"
+                  rel="noopener  nofollow  noreferrer"
+                  aria-label="Facebook"
+                >
+                  <svg class="btn-icon" width="24" height="24" aria-label="logo Facebook">
+                    <use href="/coffee-house/assets/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- WebStudio contacts -->
+          <address class="address">
+            <p class="address__title">Contact us</p>
+            <ul class="address__items">
+              <li class="address__item">
+                <a
+                  href="https://maps.app.goo.gl/93NEDifoCJj2nB6B9"
+                  class="address__link"
+                  target="_blank"
+                  rel="noopener  nofollow  noreferrer"
+                >
+                  <svg class="icon" width="20" height="20" aria-label="icon pin-alt">
+                    <use href="/coffee-house/assets/sprite.svg#pin-alt"></use>
+                  </svg>
+                  <span>8558 Green Rd&period;&comma; LA</span></a
+                >
+              </li>
+              <li class="address__item">
+                <a href="tel:+16035550123" class="address__link">
+                  <svg class="icon" width="20" height="20" aria-label="icon phone">
+                    <use href="/coffee-house/assets/sprite.svg#phone"></use>
+                  </svg>
+                  <span>&plus;1 &lpar;603&rpar; 555&hyphen;0123</span>
+                </a>
+              </li>
+              <li class="address__item">
+                <p class="address__link">
+                  <svg class="icon" width="20" height="20" aria-label="icon clock">
+                    <use href="/coffee-house/assets/sprite.svg#clock"></use>
+                  </svg>
+                  <span>Mon&hyphen;Sat&colon; 9&colon;00 AM &ndash; 23&colon;00 PM</span>
+                </p>
+              </li>
+            </ul>
+          </address>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Backdrop -->
+    <div class="backdrop backdrop--is-hidden">
+      <!-- Modal -->
+      <div class="modal">
+        <div class="gallery__wrap-image"></div>
+
+        <div class="modal__wrap">
+          <div>
+            <h2 class="modal__title">Irish coffee</h2>
+            <p class="modal__description">
+              Fragrant black coffee with Jameson Irish whiskey and whipped milk
+            </p>
+          </div>
+
+          <!-- Pick size - radio group -->
+          <div class="pick" role="radiogroup">
+            <p class="pick__title">Size</p>
+            <div class="pick__wrap js-drink-size"></div>
+          </div>
+
+          <!-- Pick additives - checkbox group -->
+          <div class="pick" role="group">
+            <p class="pick__title">Additives</p>
+            <div class="pick__wrap js-drink-additives"></div>
+          </div>
+
+          <p class="modal__price">
+            <span>Total&colon;</span><span class="modal__total">&#36;<span>7.00</span></span>
+          </p>
+
+          <div class="modal__info">
+            <span>&#9432;</span>
+            <p>
+              The cost is not final. Download our mobile app to see the final price and place your
+              order. Earn loyalty points and enjoy your favorite coffee with up to 20% discount.
+            </p>
+          </div>
+
+          <button type="button" class="modal__btn">Close</button>
+        </div>
+      </div>
+    </div>
+
+    
+  </body>
+</html>
