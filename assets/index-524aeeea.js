@@ -101,17 +101,18 @@ const handlePointerDown = (e) => {
   holdSlider();
 };
 const handlePointerUp = (e) => {
-  continueSlider();
   let endX = null;
   endX = e.changedTouches[0].clientX;
   const deltaX = endX - startX;
   startX = null;
   endX = null;
-  if (deltaX > 0) {
+  if (deltaX > 5) {
     flipSliderLeft();
-  } else {
+  }
+  if (deltaX < 5) {
     flipSliderRight();
   }
+  continueSlider();
 };
 sliderArea.addEventListener("touchstart", handlePointerDown);
-document.addEventListener("touchend", handlePointerUp);
+sliderArea.addEventListener("touchend", handlePointerUp);

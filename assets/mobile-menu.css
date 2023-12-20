@@ -597,6 +597,7 @@ body {
 }
 .favorite--btn {
   position: absolute;
+  z-index: 100;
   top: 50%;
   -webkit-transform: translateY(-50%);
      -moz-transform: translateY(-50%);
@@ -1446,6 +1447,7 @@ body {
     line-height: 1.25;
     background-color: #e1d4c9;
     overflow-y: auto;
+    display: none;
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
@@ -1466,6 +1468,7 @@ body {
             transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
   .nav.is-open {
+    display: block;
     position: absolute;
     opacity: 1;
     pointer-events: auto;
