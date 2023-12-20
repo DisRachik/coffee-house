@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon  -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+    <!-- Title page -->
+    <title>Coffee-House</title>
+  </head>
+
+  <body>
+    <!-- Header-block -->
+    <header class="header">
+      <div class="container header__container">
+        <!-- Logo -->
+        <a href="javascript:void(0);" class="header__logo">
+          <img
+            src="./src/icons/logo.svg"
+            alt="logo company"
+            class="header__logo--img"
+            width="100"
+          />
+        </a>
+
+        <!-- Navigation -->
+        <nav class="nav" id="mobile-menu">
+          <ul class="nav__items">
+            <li class="nav__item"><a href="#favorite" class="nav__link">Favorite coffee</a></li>
+            <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="#mobile" class="nav__link">Mobile app</a></li>
+            <li class="nav__item"><a href="#footer" class="nav__link">Contact us</a></li>
+            <li class="nav__item">
+              <a href="./menu.html" class="header__menu-page"
+                >Menu
+                <svg class="icon" width="20" height="20" aria-label="cup">
+                  <use href="./src/icons/sprite.svg#coffee-cup"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <a href="./menu.html" class="header__menu-page none"
+          >Menu
+          <svg class="icon" width="20" height="20" aria-label="cup">
+            <use href="./src/icons/sprite.svg#coffee-cup"></use>
+          </svg>
+        </a>
+
+        <!-- Mobile menu -->
+        <button
+          class="btn btn__mobile-menu"
+          type="button"
+          aria-label="Open mobile-menu"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main-block -->
+    <main>
+      <h1 class="visually-hidden">Enjoy premium coffee at our charming cafe</h1>
+      <!-- The Hero section -->
+      <section class="section hero--section">
+        <div class="container hero--container">
+          <video
+            class="hero-video"
+            poster="./src/images/img-hero.jpg"
+            width="1360"
+            autoplay
+            muted
+            loop
+            preload="auto"
+          >
+            <source src="./video/hero-video.mp4" />
+          </video>
+
+          <div class="hero-wrap">
+            <h2 class="hero--title">
+              <span class="section__title--accent">Enjoy</span> premium coffee at our charming cafe
+            </h2>
+            <p class="text">
+              With its inviting atmosphere and delicious coffee options, the Coffee House Resource
+              is a popular destination for coffee lovers and those seeking a warm and inviting space
+              to enjoy their favorite beverage.
+            </p>
+            <a href="./menu.html" class="hero--btn">
+              <span class="hero--btn__text">Menu</span>
+              <svg class="icon" width="20" height="20" aria-label="cup">
+                <use href="./src/icons/sprite.svg#coffee-cup"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Favorites Coffee -->
+      <section class="section" id="favorite">
+        <div class="container">
+          <h2 class="section__title">
+            Choose your <span class="section__title--accent">favorite</span> coffee
+          </h2>
+
+          <div class="favorite__slider">
+            <button class="btn favorite--btn favorite--btn__left" type="button">
+              <svg class="icon" width="24" height="24" aria-label="arrow to left">
+                <use href="./src/icons/sprite.svg#arrow-left"></use>
+              </svg>
+            </button>
+
+            <div class="favorite__slider-wrap">
+              <ul class="favorite__list">
+                <li class="favorite-card first">
+                  <picture class="favorite-card__image">
+                    <source
+                      srcset="
+                        ./src/images/favorites/coffee-slider-1-mb.webp    1x,
+                        ./src/images/favorites/coffee-slider-1-mb@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(max-width: 767.98px)"
+                    />
+                    <source
+                      srcset="
+                        ./src/images/favorites/coffee-slider-1-mb.png    1x,
+                        ./src/images/favorites/coffee-slider-1-mb@2x.png 2x
+                      "
+                      type="image/png"
+                      media="(max-width: 767.98px)"
+                    />
+                    <source
+                      srcset="
+                        ./src/images/favorites/coffee-slider-1-dt.webp    1x,
+                        ./src/images/favorites/coffee-slider-1-dt@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./src/images/favorites/coffee-slider-1-dt.png    1x,
+                        ./src/images/favorites/coffee-slider-1-dt@2x.png 2x
+                      "
+                      type="image/png"
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      src="./src/images/favorites/coffee-slider-1-mb.png"
+                      alt="S’mores Frappuccino"
+                      width="480"
+                      height="480"
+                      loading="lazy"
+                    />
+                  </picture>
+
+                  <h3 class="favorite-card__title">S’mores Frappuccino</h3>
+                  <p class="favorite-card__text">
+                    This new drink takes an espresso and mixes it with brown sugar and cinnamon
+                    before being topped with oat milk.
+                  </p>
+                  <p class="favorite-card__price">&#36;5.50</p>
+                </li>
+
+                <li class="favorite-card second">
+                  <picture class="favorite-card__image">
+                    <source
+                      srcset="
+                        ./src/images/favorites/coffee-slider-2-mb.webp    1x,
+                        ./src/images/favorites/coffee-slider-2-mb@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(max-width: 767.98px)"
+                    />
+                    <source
+                      srcset="
+                        ./src/images/favorites/coffee-slider-2-mb.png    1x,
+                        ./src/images/favorites/coffee-slider-2-mb@2x.png 2x
+                      "
+                      type="image/png"
+                      media="(max-width: 767.98px)"
+                    />
+                    <source
+                      srcset="
+                        ./src/images/favorites/coffee-slider-2-dt.webp    1x,
+                        ./src/images/favorites/coffee-slider-2-dt@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./src/images/favorites/coffee-slider-2-dt.png    1x,
+                        ./src/images/favorites/coffee-slider-2-dt@2x.png 2x
+                      "
+                      type="image/png"
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      src="./src/images/favorites/coffee-slider-2-mb.png"
+                      alt="Caramel Macchiato"
+                      width="480"
+                      height="480"
+                      loading="lazy"
+                    />
+                  </picture>
+
+                  <h3 class="favorite-card__title">Caramel Macchiato</h3>
+                  <p class="favorite-card__text">
+                    Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream
+                    under whipped thick foam.
+                  </p>
+                  <p class="favorite-card__price">&#36;5.00</p>
+                </li>
+
+                <li class="favorite-card therd">
+                  <picture class="favorite-card__image">
+                    <source
+                      srcset="
+                        ./src/images/favorites/coffee-slider-3-mb.webp    1x,
+                        ./src/images/favorites/coffee-slider-3-mb@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(max-width: 767.98px)"
+                    />
+                    <source
+                      srcset="
+                        ./src/images/favorites/coffee-slider-3-mb.png    1x,
+                        ./src/images/favorites/coffee-slider-3-mb@2x.png 2x
+                      "
+                      type="image/png"
+                      media="(max-width: 767.98px)"
+                    />
+                    <source
+                      srcset="
+                        ./src/images/favorites/coffee-slider-3-dt.webp    1x,
+                        ./src/images/favorites/coffee-slider-3-dt@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./src/images/favorites/coffee-slider-3-dt.png    1x,
+                        ./src/images/favorites/coffee-slider-3-dt@2x.png 2x
+                      "
+                      type="image/png"
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      src="./src/images/favorites/coffee-slider-3-mb.png"
+                      alt="Ice coffee"
+                      width="480"
+                      height="480"
+                      loading="lazy"
+                    />
+                  </picture>
+
+                  <h3 class="favorite-card__title">Ice coffee</h3>
+                  <p class="favorite-card__text">
+                    A popular summer drink that tones and invigorates. Prepared from coffee, milk
+                    and ice.
+                  </p>
+                  <p class="favorite-card__price">&#36;4.50</p>
+                </li>
+              </ul>
+            </div>
+
+            <button class="btn favorite--btn favorite--btn__right" type="button">
+              <svg class="icon" width="24" height="24" aria-label="arrow to right">
+                <use href="./src/icons/sprite.svg#arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+
+          <div class="favorite__dots">
+            <button class="favorite__dot" type="button" aria-label="First product`s card">
+              <span class="favorite__dot--bg"></span>
+            </button>
+            <button class="favorite__dot" type="button" aria-label="Second product`s card">
+              <span class="favorite__dot--bg"></span>
+            </button>
+            <button class="favorite__dot" type="button" aria-label="Third product`s card">
+              <span class="favorite__dot--bg"></span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- About and images -->
+      <section class="section" id="about">
+        <div class="container about--container">
+          <h2 class="section__title">
+            Resource is <span class="section__title--accent">the perfect and cozy place</span> where
+            you can enjoy a variety of hot beverages, relax, catch up with friends, or get some work
+            done.
+          </h2>
+          <ul class="about__gallery">
+            <li class="about__item">
+              <picture class="about__image">
+                <source
+                  srcset="./src/images/about/about-1.webp 1x, ./src/images/about/about-1@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./src/images/about/about-1.jpg 1x, ./src/images/about/about-1@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img
+                  src="./src/images/about/about-1.jpg"
+                  alt="A girl in a cafe with a cup of coffee on the table."
+                  width="660"
+                  loading="lazy"
+                />
+              </picture>
+            </li>
+
+            <li class="about__item">
+              <picture class="about__image">
+                <source
+                  srcset="./src/images/about/about-2.webp 1x, ./src/images/about/about-2@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./src/images/about/about-2.jpg 1x, ./src/images/about/about-2@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img
+                  src="./src/images/about/about-2.jpg"
+                  alt="A man at a laptop in a cafe with a cup of coffee."
+                  width="660"
+                  loading="lazy"
+                />
+              </picture>
+            </li>
+
+            <li class="about__item">
+              <picture class="about__image">
+                <source
+                  srcset="./src/images/about/about-3.webp 1x, ./src/images/about/about-3@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./src/images/about/about-3.jpg 1x, ./src/images/about/about-3@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img
+                  src="./src/images/about/about-3.jpg"
+                  alt="A cup of coffee with a spoon on the table in a cafe."
+                  width="660"
+                  loading="lazy"
+                />
+              </picture>
+            </li>
+
+            <li class="about__item">
+              <picture class="about__image">
+                <source
+                  srcset="./src/images/about/about-4.webp 1x, ./src/images/about/about-4@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./src/images/about/about-4.jpg 1x, ./src/images/about/about-4@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img
+                  src="./src/images/about/about-4.jpg"
+                  alt="A young couple is enjoying coffee on the terrace of a cafe."
+                  width="660"
+                  loading="lazy"
+                />
+              </picture>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Mobile App -->
+      <section class="section" id="mobile">
+        <div class="container mobile-app--container">
+          <div class="mobile-app--wrap">
+            <h2 class="section__title">
+              <span class="section__title--accent">Download</span> our apps to start ordering
+            </h2>
+            <p class="mobile-app__text">
+              Download the Resource app today and experience the comfort of ordering your favorite
+              coffee from wherever you are
+            </p>
+
+            <ul class="mobile-app--stores">
+              <li>
+                <a
+                  href="https://www.apple.com/app-store/"
+                  class="btn--store"
+                  target="_blank"
+                  rel="noopener  nofollow  noreferrer"
+                >
+                  <svg class="btn-icon" width="36" height="36" aria-label="logo apple">
+                    <use href="./src/icons/sprite.svg#app-store"></use>
+                  </svg>
+                  <div class="btn--store__text">
+                    <p>Available on the</p>
+                    <p>App Store</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://play.google.com/store/"
+                  class="btn--store"
+                  target="_blank"
+                  rel="noopener  nofollow  noreferrer"
+                >
+                  <svg class="btn-icon" width="36" height="36" aria-label="logo play market">
+                    <use href="./src/icons/sprite.svg#google-play"></use>
+                  </svg>
+                  <div class="btn--store__text">
+                    <p>Available on</p>
+                    <p>Google Play</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mobile-app--wrap">
+            <picture class="mobile-app__image">
+              <source
+                srcset="
+                  ./src/images/mobile/mobile-screens-mb.webp    1x,
+                  ./src/images/mobile/mobile-screens-mb@2x.webp 2x
+                "
+                type="image/webp"
+                media="(max-width: 767.98px)"
+              />
+              <source
+                srcset="
+                  ./src/images/mobile/mobile-screens-mb.png    1x,
+                  ./src/images/mobile/mobile-screens-mb@2x.png 2x
+                "
+                type="image/png"
+                media="(max-width: 767.98px)"
+              />
+              <source
+                srcset="
+                  ./src/images/mobile/mobile-screens-dt.webp    1x,
+                  ./src/images/mobile/mobile-screens-dt@2x.webp 2x
+                "
+                type="image/webp"
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="
+                  ./src/images/mobile/mobile-screens-dt.png    1x,
+                  ./src/images/mobile/mobile-screens-dt@2x.png 2x
+                "
+                type="image/png"
+                media="(min-width: 768px)"
+              />
+              <img
+                src="./src/images/mobile/mobile-screens-mb.png"
+                alt="Image of two smartphones with a cafe website open."
+                width="630"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer-block -->
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="footer--container">
+          <div class="footer__wrap">
+            <h1 class="section__title">
+              Sip, Savor, Smile. <span class="section__title--accent">It’s coffee time!</span>
+            </h1>
+            <!-- socials links -->
+            <ul class="footer__socials">
+              <li class="footer__social-item">
+                <a
+                  href="https://twitter.com/"
+                  class="btn btn--socials"
+                  target="_blank"
+                  rel="noopener  nofollow  noreferrer"
+                  aria-label="Twitter"
+                >
+                  <svg class="btn-icon" width="24" height="24" aria-label="logo Twitter">
+                    <use href="./src/icons/sprite.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__social-item">
+                <a
+                  href="https://www.instagram.com/"
+                  class="btn btn--socials"
+                  target="_blank"
+                  rel="noopener  nofollow  noreferrer"
+                  aria-label="Instagram"
+                >
+                  <svg class="btn-icon" width="24" height="24" aria-label="logo Instagram">
+                    <use href="./src/icons/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__social-item">
+                <a
+                  href="https://www.facebook.com/"
+                  class="btn btn--socials"
+                  target="_blank"
+                  rel="noopener  nofollow  noreferrer"
+                  aria-label="Facebook"
+                >
+                  <svg class="btn-icon" width="24" height="24" aria-label="logo Facebook">
+                    <use href="./src/icons/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- WebStudio contacts -->
+          <address class="address">
+            <p class="address__title">Contact us</p>
+            <ul class="address__items">
+              <li class="address__item">
+                <a
+                  href="https://maps.app.goo.gl/93NEDifoCJj2nB6B9"
+                  class="address__link"
+                  target="_blank"
+                  rel="noopener  nofollow  noreferrer"
+                >
+                  <svg class="icon" width="20" height="20" aria-label="icon pin-alt">
+                    <use href="./src/icons/sprite.svg#pin-alt"></use>
+                  </svg>
+                  <span>8558 Green Rd&period;&comma; LA</span></a
+                >
+              </li>
+              <li class="address__item">
+                <a href="tel:+16035550123" class="address__link">
+                  <svg class="icon" width="20" height="20" aria-label="icon phone">
+                    <use href="./src/icons/sprite.svg#phone"></use>
+                  </svg>
+                  <span>&plus;1 &lpar;603&rpar; 555&hyphen;0123</span>
+                </a>
+              </li>
+              <li class="address__item">
+                <p class="address__link">
+                  <svg class="icon" width="20" height="20" aria-label="icon clock">
+                    <use href="./src/icons/sprite.svg#clock"></use>
+                  </svg>
+                  <span>Mon&hyphen;Sat&colon; 9&colon;00 AM &ndash; 23&colon;00 PM</span>
+                </p>
+              </li>
+            </ul>
+          </address>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./src/js/index.js" type="module"></script>
+  </body>
+</html>
